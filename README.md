@@ -71,57 +71,57 @@ Transform textual and categorical data into numerical formats that ML models can
 
 # Incident Template
 
-```
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Incident Report: [Incident Title]</title>
-    <style>
-        .incident-report { font-family: Arial, sans-serif; }
-        .incident-section { margin-bottom: 20px; }
-        .incident-title { color: #333; }
-        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned { color: #666; }
-        .detail-label { font-weight: bold; }
-        .detail-info { margin-left: 5px; }
-    </style>
-</head>
-<body>
-    <article class="incident-report">
-        <h1 class="incident-title">Incident Report</h1>
-        <section class="incident-section incident-detail">
-            <h2>Incident Details</h2>
-            <p><span class="detail-label">Incident ID:</span><span class="detail-info">[Unique Incident ID]</span></p>
-            <p><span class="detail-label">Title:</span><span class="detail-info">[Incident Title]</span></p>
-            <p><span class="detail-label">Date and Time:</span><span class="detail-info">[Date and Time of Incident]</span></p>
-            <p><span class="detail-label">Reported By:</span><span class="detail-info">[Reporter Name/Department]</span></p>
-            <p><span class="detail-label">Component Affected:</span><span class="detail-info">[Affected Component]</span></p>
-        </section>
-        <section class="incident-section incident-description">
-            <h2>Incident Description</h2>
-            <p>[Detailed Description of the Incident]</p>
-        </section>
-        <section class="incident-section impact-analysis">
-            <h2>Impact Analysis</h2>
-            <p>[Analysis of the Incident's Impact]</p>
-        </section>
-        <section class="incident-section resolution-steps">
-            <h2>Resolution Steps</h2>
-            <p>[Step-by-Step Resolution]</p>
-            <p><span class="detail-label">Resolved By:</span><span class="detail-info">[Name/Team]</span></p>
-            <p><span class="detail-label">Resolution Date and Time:</span><span class="detail-info">[Date and Time of Resolution]</span></p>
-        </section>
-        <section class="incident-section incident-status">
-            <h2>Status</h2>
-            <p>[Current Status of the Incident]</p>
-        </section>
-        <section class="incident-section lessons-learned">
-            <h2>Lessons Learned</h2>
-            <p>[Insights or Lessons Learned from the Incident]</p>
-        </section>
-    </article>
-</body>
+> ```
+> <!DOCTYPE html>
+> <html lang="en">
+> <head>
+>     <meta charset="UTF-8">
+>     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+>     <title>Incident Report: [Incident Title]</title>
+>     <style>
+>         .incident-report { font-family: Arial, sans-serif; }
+>         .incident-section { margin-bottom: 20px; }
+>         .incident-title { color: #333; }
+>         .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned { color: #666; }
+>         .detail-label { font-weight: bold; }
+>         .detail-info { margin-left: 5px; }
+>     </style>
+> </head>
+> <body>
+>     <article class="incident-report">
+>         <h1 class="incident-title">Incident Report</h1>
+>         <section class="incident-section incident-detail">
+>             <h2>Incident Details</h2>
+>             <p><span class="detail-label">Incident ID:</span><span class="detail-info">[Unique Incident ID]</span></p>
+>             <p><span class="detail-label">Title:</span><span class="detail-info">[Incident Title]</span></p>
+>             <p><span class="detail-label">Date and Time:</span><span class="detail-info">[Date and Time of Incident]</span></p>
+>             <p><span class="detail-label">Reported By:</span><span class="detail-info">[Reporter Name/Department]</span></p>
+>             <p><span class="detail-label">Component Affected:</span><span class="detail-info">[Affected Component]</span></p>
+>         </section>
+>         <section class="incident-section incident-description">
+>             <h2>Incident Description</h2>
+>             <p>[Detailed Description of the Incident]</p>
+>         </section>
+>         <section class="incident-section impact-analysis">
+>             <h2>Impact Analysis</h2>
+>             <p>[Analysis of the Incident's Impact]</p>
+>         </section>
+>         <section class="incident-section resolution-steps">
+>             <h2>Resolution Steps</h2>
+>             <p>[Step-by-Step Resolution]</p>
+>             <p><span class="detail-label">Resolved By:</span><span class="detail-info">[Name/Team]</span></p>
+>             <p><span class="detail-label">Resolution Date and Time:</span><span class="detail-info">[Date and Time of Resolution]</span></p>
+>         </section>
+>         <section class="incident-section incident-status">
+>             <h2>Status</h2>
+>             <p>[Current Status of the Incident]</p>
+>         </section>
+>         <section class="incident-section lessons-learned">
+>             <h2>Lessons Learned</h2>
+>             <p>[Insights or Lessons Learned from the Incident]</p>
+>         </section>
+>     </article>
+> </body>
 </html>
 
 ```
