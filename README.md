@@ -144,6 +144,7 @@ Transform textual and categorical data into numerical formats that ML models can
 ## List of incidents, impacts, and resolutions
 
 ###1)
+```
 > Incident: Database-1 is not accessible
 > Impact: Service-2 and Service-4 are not able to access data. As a result Service-1 and Service-3 is not able to provide data to App-1, App-2 and App-3 and App-4
 > Resolutions: Restart Database-1
@@ -287,3 +288,4 @@ Transform textual and categorical data into numerical formats that ML models can
 > Incident: App-4 configuration changes
 > Impact: Outside world is able to access App-4 but due to misconfiguration is not able to use it
 > Resolutions: Revert back App-4 configuration changes and restart App-4
+```
