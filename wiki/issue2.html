@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incident Report: Router-1 is not reachable</title>
+    <style>
+        .incident-report { font-family: Arial, sans-serif; }
+        .incident-section { margin-bottom: 20px; }
+        .incident-title { color: #333; }
+        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned { color: #666; }
+        .detail-label { font-weight: bold; }
+        .detail-info { margin-left: 5px; }
+    </style>
+</head>
+<body>
+    <article class="incident-report">
+        <h1 class="incident-title">Incident Report</h1>
+        <section class="incident-section incident-detail">
+            <h2>Incident Details</h2>
+            <p><span class="detail-label">Incident ID:</span><span class="detail-info">002</span></p>
+            <p><span class="detail-label">Title:</span><span class="detail-info">Router-1 is not reachable</span></p>
+            <p><span class="detail-label">Date and Time:</span><span class="detail-info">2023-02-20 09:32</span></p>
+            <p><span class="detail-label">Reported By:</span><span class="detail-info">Alice Johnson/Network Operations</span></p>
+            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Router-1</span></p>
+        </section>
+        <section class="incident-section incident-description">
+            <h2>Incident Description</h2>
+            <p>Router-1 became unreachable at 09:32, preventing external access to applications App-1 and App-2. Initial diagnostics failed to identify the cause of the connectivity issue.</p>
+        </section>
+        <section class="incident-section impact-analysis">
+            <h2>Impact Analysis</h2>
+            <p>The unavailability of Router-1 has led to a complete loss of external connectivity for App-1 and App-2, affecting user access and critical business operations.</p>
+        </section>
+        <section class="incident-section resolution-steps">
+            <h2>Resolution Steps</h2>
+            <p>1. Network team alerted and began troubleshooting.</p>
+            <p>2. Restart Router-1 at 10:15 after initial diagnostics.</p>
+            <p>3. Connectivity restored, and services for App-1 and App-2 resumed normal operation by 10:45.</p>
+            <p><span class="detail-label">Resolved By:</span><span class="detail-info">Bob Smith/Network Operations</span></p>
+            <p><span class="detail-label">Resolution Date and Time:</span><span class="detail-info">2023-02-20 10:45</span></p>
+        </section>
+        <section class="incident-section incident-status">
+            <h2>Status</h2>
+            <p>Resolved</p>
+        </section>
+        <section class="incident-section lessons-learned">
+            <h2>Lessons Learned</h2>
+            <p>Further investigation revealed a firmware issue was the root cause. The incident underscores the need for regular firmware updates and more robust monitoring of network components to detect and address such issues proactively.</p>
+        </section>
+    </article>
+</body>
+</html>
