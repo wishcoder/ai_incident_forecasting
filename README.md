@@ -138,8 +138,7 @@ Transform textual and categorical data into numerical formats that ML models can
 >     </article>
 > </body>
 > </html>
-
-```
+> ```
 
 
 ## List of incidents, impacts, and resolutions
