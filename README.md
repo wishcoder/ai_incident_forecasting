@@ -1,7 +1,7 @@
 # AI Incident Forecasting
 Transform textual and categorical data into numerical formats that ML models can process. For instance, issue types, system components affected, and steps taken can be encoded using techniques like one-hot encoding, TF-IDF for text, or embedding layers for more complex representations.
 
-#  System of Record
+# System of Record
 
 | Component Type | Component Name | app_id      | component_id      |
 |----------------|----------------|-------------|-------------------|
@@ -18,3 +18,27 @@ Transform textual and categorical data into numerical formats that ML models can
 | Service        | Service-3      | service_3   | service_3_comp    |
 | Service        | Service-4      | service_4   | service_4_comp    |
 | Database       | Database-1     | db_1        | db_1_comp         |
+
+# Network Diagram
+
+Outside Network
+       |
+  +----+-----+
+  |          |
+Router-1   Router-2
+  |          |
+Firewall-1 Firewall-2
+  |          |
++--+--+    +--+--+
+|     |    |     |
+App-1 App-2 App-3 App-4
+  |     |    |     |
+  +-----+    +-----+
+     |          |
+  Service-1  Service-3
+     |          |
+  Service-2  Service-4
+     |          |
+     +-----+----+
+           |
+       Database-1
