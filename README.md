@@ -4,7 +4,7 @@ Transform textual and categorical data into numerical formats that ML models can
 ## Run
 
 > [!TIP]
-> [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/wishcoder/ai_feature_engineering/HEAD)
+> [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/wishcoder/ai_incident_forecasting.git/HEAD)
 
 
 ## Python Packages
