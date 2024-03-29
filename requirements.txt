@@ -12,3 +12,7 @@ tensorflow
 transformers
 torch
 flax
+jupyterlab
+notebook
+# run jupyter notebook locally using the following command:
+# jupyter notebook
