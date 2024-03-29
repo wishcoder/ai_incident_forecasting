@@ -2,7 +2,7 @@
 Transform textual and categorical data into numerical formats that ML models can process. For instance, issue types, system components affected, and steps taken can be encoded using techniques like one-hot encoding, TF-IDF for text, or embedding layers for more complex representations.
 
 #  System of Record
-_____________________________________________________________________
+
 | Component Type | Component Name | app_id      | component_id      |
 |----------------|----------------|-------------|-------------------|
 | Router         | Router-1       | router_1    | router_1_comp     |
@@ -18,4 +18,3 @@ _____________________________________________________________________
 | Service        | Service-3      | service_3   | service_3_comp    |
 | Service        | Service-4      | service_4   | service_4_comp    |
 | Database       | Database-1     | db_1        | db_1_comp         |
-_____________________________________________________________________
