@@ -71,13 +71,14 @@ Transform textual and categorical data into numerical formats that ML models can
 
 # Architecture Flow
 
+```
 **1.** Outside Network wants to connect to App-1 or App-2 will have to go through Router-1. Router-1 connects to Firewall-1. Based on the request Firewall-1 sends the request to App-1 or App-2 .
 **2.** Outside Network wants to connect to App-3 or App-4 will have to go through Router-2. Router-2 connects to Firewall-2. Based on the request Firewall-2 sends the request to App-3 or App-4 .
 **3.** App-1 connects to Service-1. Service-1 connects Service-2. Service-2 connects to to database-1 and read data.
 **4.** App-2 connects to Service-1. Service-1 connects Service-2. Service-2 connects to to database-1 and read data.
 **5.** App-3 connects to Service-3. Service-3 connects Service-4. Service-4 connects to to database-1 and read data.
 **6.** App-4 connects to Service-3. Service-3 connects Service-4. Service-4 connects to to database-1 and read data.
-
+```
 
 # Incident Template
 
