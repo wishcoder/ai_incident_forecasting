@@ -143,148 +143,148 @@ Transform textual and categorical data into numerical formats that ML models can
 
 ## List of incidents, impacts, and resolutions
 
-###1)
 ```
+1)
 > Incident: Database-1 is not accessible
 > Impact: Service-2 and Service-4 are not able to access data. As a result Service-1 and Service-3 is not able to provide data to App-1, App-2 and App-3 and App-4
 > Resolutions: Restart Database-1
 
-###2) 
+2) 
 > Incident: Router-1 is not reachable
 > Impact: Outside world is not able to access App-1 and App-2
 > Resolutions: Restart Router-1
 
-###3) 
+3) 
 > Incident: Router-1 configuration changes
 > Impact: Outside world is not able to access App-1 and App-2
 > Resolutions: Roll back Router-1 configuration changes
 
-###4) 
+4) 
 > Incident: Router-2 is not reachable
 > Impact: Outside world is not able to access App-3 and App-4
 > Resolutions: Restart Router-2
 
-###5) 
+5) 
 > Incident: Router-2 configuration changes
 > Impact: Outside world is not able to access App-3 and App-4
 > Resolutions: Roll back Router-2 configuration changes
 
-###6) 
+6) 
 > Incident: Firewall-1 is not reachable
 > Impact: Outside world is not able to access App-1 and App-2
 > Resolutions: Restart Firewall-1
 
-###7) 
+7) 
 > Incident: Firewall-1 configuration changes
 > Impact: Outside world is not able to access App-1 and App-2
 > Resolutions: Roll back Firewall-1 configuration changes
 
-###8) 
+8) 
 > Incident: Firewall-1 configuration change routing all traffic to App-1
 > Impact: Outside world is not able to access App-2
 > Resolutions: Roll back Firewall-1 configuration changes
 
-###9) 
+9) 
 > Incident: Firewall-1 configuration change routing all traffic to App-2
 > Impact: Outside world is not able to access App-1
 > Resolutions: Roll back Firewall-1 configuration changes
 
-###10) 
+10) 
 > Incident: Firewall-2 is not reachable
 > Impact: Outside world is not able to access App-3 and App-4
 > Resolutions: Restart Firewall-2
 
-###11) 
+11) 
 > Incident: Firewall-2 configuration changes
 > Impact: Outside world is not able to access App-3 and App-4
 > Resolutions: Roll back Firewall-2 configuration changes
 
-###12) 
+12) 
 > Incident: Firewall-2 configuration change routing all traffic to App-3
 > Impact: Outside world is not able to access App-4
 > Resolutions: Roll back Firewall-2 configuration changes
 
-###13) 
+13) 
 > Incident: Firewall-2 configuration change routing all traffic to App-4
 > Impact: Outside world is not able to access App-3
 > Resolutions: Roll back Firewall-2 configuration changes
 
-###14) 
+14) 
 > Incident: Service-2 is not accessible
 > Impact: Service-1 is not able to access Service-2 and not able to provide data back to App-1 and App-2
 > Resolutions: Restart Service-2
 
-###15) 
+15) 
 > Incident: Service-2 changes
 > Impact: Service-1 is able to access Service-2 but due to misconfiguration is not able to provide data back to App-1 and App-2
 > Resolutions: Roll back Service-2 changes and restart Service-2
 
-###16) 
+16) 
 > Incident: Service-4 is not accessible
 > Impact: Service-3 is not able to access Service-4 and not able to provide data back to App-3 and App-4
 > Resolutions: Restart Service-4
 
-###17) 
+17) 
 > Incident: Service-4 changes
 > Impact: Service-3 is able to access Service-4 but due to misconfiguration is not able to provide data back to App-3 and App-4
 > Resolutions: Roll back Service-4 changes and restart Service-4
 
-###18) 
+18) 
 > Incident: Service-1 is not accessible
 > Impact: App-1 and App-2 is not able to access data from Service-1
 > Resolutions: Restart Service-1
 
-###19) 
+19) 
 > Incident: Service-1 changes
 > Impact: App-1 and App-2 is able to access Service-1 but due to misconfiguration is not able to access data
 > Resolutions: Roll back Service-1 changes and restart Service-1
 
-###20) 
+20) 
 > Incident: Service-3 is not accessible
 > Impact: App-3 and App-4 is not able to access data from Service-3
 > Resolutions: Restart Service-3
 
-###21) 
+21) 
 > Incident: Service-3 changes
 > Impact: App-3 and App-4 are able to access Service-3 but due to misconfiguration is not able to access data
 > Resolutions: Roll back Service-3 changes and restart Service-3
 
-###22) 
+22) 
 > Incident: App-1 is not accessible
 > Impact: Outside world is not able to access App-1
 > Resolutions: Restart App-1
 
-###23) 
+23) 
 > Incident: App-2 is not accessible
 > Impact: Outside world is not able to access App-2
 > Resolutions: Restart App-2
 
-###24) 
+24) 
 > Incident: App-3 is not accessible
 > Impact: Outside world is not able to access App-3
 > Resolutions: Restart App-3
 
-###25) 
+25) 
 > Incident: App-4 is not accessible
 > Impact: Outside world is not able to access App-4
 > Resolutions: Restart App-4
 
-###26) 
+26) 
 > Incident: App-1 configuration changes
 > Impact: Outside world is able to access App-1 but due to misconfiguration is not able to use it
 > Resolutions: Revert back App-1 configuration changes and restart App-1
 
-###27) 
+27) 
 > Incident: App-2 configuration changes
 > Impact: Outside world is able to access App-2 but due to misconfiguration is not able to use it
 > Resolutions: Revert back App-2 configuration changes and restart App-2
 
-###28) 
+28) 
 > Incident: App-3 configuration changes
 > Impact: Outside world is able to access App-3 but due to misconfiguration is not able to use it
 > Resolutions: Revert back App-3 configuration changes and restart App-3
 
-###29) 
+29) 
 > Incident: App-4 configuration changes
 > Impact: Outside world is able to access App-4 but due to misconfiguration is not able to use it
 > Resolutions: Revert back App-4 configuration changes and restart App-4
