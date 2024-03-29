@@ -1,0 +1,15 @@
+numpy
+beautifulsoup4
+SciPy
+joblib
+threadpoolctl
+scikit-learn
+pandas
+lxml
+nltk
+pillow
+tensorflow
+transformers
+torch
+flax
+tf-keras
