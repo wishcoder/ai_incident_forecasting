@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incident Report: Service-2 Changes</title>
+    <style>
+        .incident-report { font-family: Arial, sans-serif; }
+        .incident-section { margin-bottom: 20px; }
+        .incident-title { color: #333; }
+        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned { color: #666; }
+        .detail-label { font-weight: bold; }
+        .detail-info { margin-left: 5px; }
+    </style>
+</head>
+<body>
+    <article class="incident-report">
+        <h1 class="incident-title">Incident Report</h1>
+        <section class="incident-section incident-detail">
+            <h2>Incident Details</h2>
+            <p><span class="detail-label">Incident ID:</span><span class="detail-info">015</span></p>
+            <p><span class="detail-label">Title:</span><span class="detail-info">Service-2 Changes</span></p>
+            <p><span class="detail-label">Date and Time:</span><span class="detail-info">2024-04-12 16:30</span></p>
+            <p><span class="detail-label">Reported By:</span><span class="detail-info">Perry Cox/Development Team</span></p>
+            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Service-2</span></p>
+        </section>
+        <section class="incident-section incident-description">
+            <h2>Incident Description</h2>
+            <p>Recent updates to Service-2 introduced a misconfiguration, leading to data retrieval issues for App-1 and App-2.</p>
+        </section>
+        <section class="incident-section impact-analysis">
+            <h2>Impact Analysis</h2>
+            <p>The misconfiguration in Service-2 prevented Service-1 from accessing necessary data, directly impacting the operational efficiency of App-1 and App-2.</p>
+        </section>
+        <section class="incident-section resolution-steps">
+            <h2>Resolution Steps</h2>
+            <p>1. The development team was alerted to the issue and began immediate troubleshooting.</p>
+            <p>2. Service-2's recent changes were rolled back to the last stable configuration by 17:15.</p>
+            <p>3. Service functionality was fully restored, and a post-mortem analysis was scheduled to prevent similar issues.</p>
+            <p><span class="detail-label">Resolved By:</span><span class="detail-info">Elliot Reid/Development Team</span></p>
+            <p><span class="detail-label">Resolution Date and Time:</span><span class="detail-info">2024-04-12 17:15</span></p>
+        </section>
+        <section class="incident-section incident-status">
+            <h2>Status</h2>
+            <p>Resolved</p>
+        </section>
+        <section class="incident-section lessons-learned">
+            <h2>Lessons Learned</h2>
+            <p>Emphasized the critical importance of thorough testing and validation of service updates in a staging environment before deployment to production to ensure compatibility and functionality.</p>
+        </section>
+    </article>
+</body>
+</html>
