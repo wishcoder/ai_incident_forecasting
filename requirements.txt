@@ -1,18 +1,18 @@
 numpy
 beautifulsoup4
-SciPy
-joblib
-threadpoolctl
+#SciPy
+#joblib
+#threadpoolctl
 scikit-learn
 pandas
-lxml
-nltk
-pillow
-tensorflow
-transformers
-torch
-flax
-jupyterlab
-notebook
+#lxml
+#nltk
+#pillow
+#tensorflow
+#transformers
+#torch
+#flax
+#jupyterlab
+#notebook
 # run jupyter notebook locally using the following command:
 # jupyter notebook
