@@ -12,6 +12,7 @@ class NumIncidentsPerDayForecasting:
     def __init__(self, data):
         self.data = pd.DataFrame(data)
         self.model = None
+        self.rmse = None
 
     def preprocess_data(self):
         """Converts date and time to numerical features and prepares target variable."""
@@ -42,11 +43,11 @@ class NumIncidentsPerDayForecasting:
         mse = mean_squared_error(y_test, predictions)
         return np.sqrt(mse)
 
-    def run(self):
+    def get_model_performance(self):
         """Executes the forecasting process."""
         self.preprocess_data()
         X_train, X_test, y_train, y_test = self.split_data()
         self.train_model(X_train, y_train)
-        rmse = self.evaluate_model(X_test, y_test)
-        print(f"Model RMSE: {rmse}")
+        self.rmse = self.evaluate_model(X_test, y_test)
+        print(f"Model RMSE: {self.rmse}")
 

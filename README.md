@@ -4,6 +4,9 @@ Transform textual and categorical data into numerical formats that ML models can
 ## Python Packages
 [Packages](requirements.txt)
 
+## Sample Incidents Dataset
+[Dataset](sample_incidents_dataset.txt)
+
 ## Data Source
 
 * Code Repositories
