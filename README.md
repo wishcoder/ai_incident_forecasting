@@ -9,7 +9,7 @@ Transform textual and categorical data into numerical formats that ML models can
 * System of Record Tool
 * Wiki Pages
  
-# System of Record
+## System of Record
 
 | Component Type | Component Name | app_id      | component_id      |
 |----------------|----------------|-------------|-------------------|
@@ -27,7 +27,33 @@ Transform textual and categorical data into numerical formats that ML models can
 | Service        | Service-4      | service_4   | service_4_comp    |
 | Database       | Database-1     | db_1        | db_1_comp         |
 
-# Network Diagram
+## System of Record - Details
+
+### Applications
+* App-1 (app_id=app_1, component_id=app_1_comp)
+* App-2 (app_id=app_2, component_id=app_2_comp)
+* App-3 (app_id=app_3, component_id=app_3_comp)
+* App-4 (app_id=app_4, component_id=app_4_comp)
+
+### Services
+* Service-1 (app_id=service_1, component_id=service_1_comp)
+* Service-2 (app_id=service_2, component_id=service_2_comp)
+* Service-3 (app_id=service_3, component_id=service_3_comp)
+* Service-4 (app_id=service_4, component_id=service_4_comp)
+
+### Databases
+* Databse-1 (app_id=db_1, component_id=db_1_comp)
+
+### Routers
+* Router-1 (app_id=router_1, component_id=router_1_comp)
+* Router-2 (app_id=router_2, component_id=router_2_comp)
+
+### Firewalls
+* Firewall-1 (app_id=firewall_1, component_id=firewall_1_comp)
+* Firewall-2 (app_id=firewall_2, component_id=firewall_2_comp)
+
+
+## Network Diagram
 
 ```
        +--------------------------------------------+
@@ -69,7 +95,7 @@ Transform textual and categorical data into numerical formats that ML models can
                        +-----------+
 ```
 
-# Architecture Flow
+## Architecture Flow
 
 
 **1.** Outside Network wants to connect to App-1 or App-2 will have to go through Router-1. Router-1 connects to Firewall-1. Based on the request Firewall-1 sends the request to App-1 or App-2 .
@@ -84,7 +110,7 @@ Transform textual and categorical data into numerical formats that ML models can
 
 **6.** App-4 connects to Service-3. Service-3 connects Service-4. Service-4 connects to to database-1 and read data.
 
-# Incident Template
+## Incident Template
 
 > ```
 > <!DOCTYPE html>
