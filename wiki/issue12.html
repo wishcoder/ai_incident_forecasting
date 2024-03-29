@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incident Report: Firewall-2 Routing All Traffic to App-3</title>
+    <style>
+        .incident-report { font-family: Arial, sans-serif; }
+        .incident-section { margin-bottom: 20px; }
+        .incident-title { color: #333; }
+        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned { color: #666; }
+        .detail-label { font-weight: bold; }
+        .detail-info { margin-left: 5px; }
+    </style>
+</head>
+<body>
+    <article class="incident-report">
+        <h1 class="incident-title">Incident Report</h1>
+        <section class="incident-section incident-detail">
+            <h2>Incident Details</h2>
+            <p><span class="detail-label">Incident ID:</span><span class="detail-info">012</span></p>
+            <p><span class="detail-label">Title:</span><span class="detail-info">Firewall-2 Routing All Traffic to App-3</span></p>
+            <p><span class="detail-label">Date and Time:</span><span class="detail-info">2024-01-20 11:00</span></p>
+            <p><span class="detail-label">Reported By:</span><span class="detail-info">Alexa Ramirez/Network Operations</span></p>
+            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Firewall-2</span></p>
+        </section>
+        <section class="incident-section incident-description">
+            <h2>Incident Description</h2>
+            <p>An incorrect routing rule in Firewall-2 directed all incoming traffic exclusively to App-3, leaving App-4 inaccessible.</p>
+        </section>
+        <section class="incident-section impact-analysis">
+            <h2>Impact Analysis</h2>
+            <p>App-4 was completely isolated from external access, severely impacting its operational capabilities and user access.</p>
+        </section>
+        <section class="incident-section resolution-steps">
+            <h2>Resolution Steps</h2>
+            <p>1. The misconfiguration was identified through traffic monitoring tools.</p>
+            <p>2. Corrective action was taken to adjust the routing rules, restoring access to App-4 by 12:30.</p>
+            <p><span class="detail-label">Resolved By:</span><span class="detail-info">Brian Foster/IT Security</span></p>
+            <p><span class="detail-label">Resolution Date and Time:</span><span class="detail-info">2024-01-20 12:30</span></p>
+        </section>
+        <section class="incident-section incident-status">
+            <h2>Status</h2>
+            <p>Resolved</p>
+        </section>
+        <section class="incident-section lessons-learned">
+            <h2>Lessons Learned</h2>
+            <p>The incident underscored the need for a thorough review and testing of firewall rules before implementation to prevent misrouting and ensure all applications remain accessible as intended.</p>
+        </section>
+    </article>
+</body>
+</html>
