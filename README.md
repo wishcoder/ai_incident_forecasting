@@ -1,6 +1,12 @@
 # AI Incident Forecasting
 Transform textual and categorical data into numerical formats that ML models can process. For instance, issue types, system components affected, and steps taken can be encoded using techniques like one-hot encoding, TF-IDF for text, or embedding layers for more complex representations.
 
+## Run
+
+> [!TIP]
+> [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/wishcoder/ai_incident_forecasting.git/HEAD)
+
+
 ## Python Packages
 [Packages](requirements.txt)
 
