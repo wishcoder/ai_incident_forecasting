@@ -1,6 +1,14 @@
 # AI Incident Forecasting
 Transform textual and categorical data into numerical formats that ML models can process. For instance, issue types, system components affected, and steps taken can be encoded using techniques like one-hot encoding, TF-IDF for text, or embedding layers for more complex representations.
 
+## Data Source
+
+* Code Repositories
+* Bug Tracking System
+* Incident Management System
+* System of Record Tool
+* Wiki Pages
+ 
 # System of Record
 
 | Component Type | Component Name | app_id      | component_id      |
