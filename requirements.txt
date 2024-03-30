@@ -8,10 +8,10 @@ pandas
 #lxml
 nltk
 #pillow
-#tensorflow
+tensorflow
 transformers
-#torch
-#flax
+torch
+flax
 #jupyterlab
 #notebook
 #ipywidgets
