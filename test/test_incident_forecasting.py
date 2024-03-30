@@ -55,6 +55,10 @@ class MyTestCase(unittest.TestCase):
         self.assertIn(predicted_components, expected_components)
         self.assertIn(predicted_resolutions, expected_resolutions)
 
+    def test_convert_to_csv(self):
+        csv_created = self.extractor.convert_to_csv(incidents_data=self.incidents_data, csv_file_name='../data/incident_data.csv')
+        self.assertTrue(csv_created)
+
 
 if __name__ == '__main__':
     unittest.main()

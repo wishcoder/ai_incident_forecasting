@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 import os
-
+import csv
 
 class IncidentDataExtractor:
     def __init__(self, wiki_folder_path):
@@ -62,3 +62,26 @@ class IncidentDataExtractor:
                 file.close()
 
         return incidents_data
+
+    def convert_to_csv(self, incidents_data, csv_file_name):
+        try:
+            # Open a new CSV file in write mode
+            with open(csv_file_name, mode='w', newline='', encoding='utf-8') as file:
+                # Create a CSV DictWriter object with the field names
+                writer = csv.DictWriter(file, fieldnames=incidents_data[0].keys())
+
+                # Write the header (column names)
+                writer.writeheader()
+
+                # Write the data rows
+                for incident in incidents_data:
+                    writer.writerow(incident)
+
+            print(f'Data has been written to {csv_file_name}')
+            return True
+        except FileNotFoundError:
+            print("File not found:", csv_file_name)
+            return False
+        except Exception as e:
+            print("An error occurred while opening the file:", e)
+            return False
