@@ -2,3 +2,5 @@
 /__pycache__/
 /.idea/
 /test/__pycache__/
+/nltk_data/
+/distilbert-base-uncased/
