@@ -8,7 +8,7 @@
         .incident-report { font-family: Arial, sans-serif; }
         .incident-section { margin-bottom: 20px; }
         .incident-title { color: #333; }
-        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned { color: #666; }
+        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned, .root-cause-analysis { color: #666; }
         .detail-label { font-weight: bold; }
         .detail-info { margin-left: 5px; }
     </style>
@@ -22,20 +22,26 @@
             <p><span class="detail-label">Title:</span><span class="detail-info">Service-1 is not accessible</span></p>
             <p><span class="detail-label">Date and Time:</span><span class="detail-info">2024-07-04 08:20</span></p>
             <p><span class="detail-label">Reported By:</span><span class="detail-info">Todd Quinlan/IT Department</span></p>
-            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Service-1</span></p>
+            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Service-1, indirectly affecting App-1 and App-2</span></p>
         </section>
         <section class="incident-section incident-description">
             <h2>Incident Description</h2>
-            <p>Service-1 experienced an unexpected downtime due to a server overload, impacting its accessibility for App-1 and App-2.</p>
+            <p>Service-1 experienced unexpected downtime early this morning due to a server overload, significantly impacting its accessibility and consequently affecting the data flow to and from App-1 and App-2. This disruption led to a temporary halt in user transactions and data processing activities.</p>
         </section>
         <section class="incident-section impact-analysis">
             <h2>Impact Analysis</h2>
-            <p>The downtime of Service-1 disrupted the data flow to and from App-1 and App-2, affecting user transactions and data processing.</p>
+            <p>The downtime of Service-1 caused a significant disruption in the operations of App-1 and App-2, affecting end-users' ability to perform transactions and access data, thereby impacting overall user satisfaction and operational efficiency.</p>
+        </section>
+        <section class="incident-section root-cause-analysis">
+            <h2>Root Cause</h2>
+            <p>An investigation into the incident revealed that Service-1 was accidentally shut down during routine maintenance activities, leading to an immediate loss of service.</p>
         </section>
         <section class="incident-section resolution-steps">
             <h2>Resolution Steps</h2>
-            <p>1. IT support was immediately notified and began troubleshooting the server issues.</p>
-            <p>2. Server resources were reallocated to manage the load, and Service-1 was brought back online by 09:45.</p>
+            <p>1. The issue was promptly identified by the IT support team, who initiated an immediate investigation into the cause of the server shutdown.</p>
+            <p>2. Actions were taken to reallocate server resources efficiently and restart Service-1, ensuring it could handle the existing load and prevent similar incidents in the future.</p>
+            <p>3. Service-1 was successfully brought back online, with full functionality restored by 09:45, and measures were put in place to monitor the service closely for any signs of instability.</p>
+            <p>4. A review of maintenance protocols was conducted to enhance procedures and prevent accidental shutdowns during routine operations.</p>
             <p><span class="detail-label">Resolved By:</span><span class="detail-info">Elliot Reid/IT Support Team</span></p>
             <p><span class="detail-label">Resolution Date and Time:</span><span class="detail-info">2024-07-04 09:45</span></p>
         </section>
@@ -45,7 +51,7 @@
         </section>
         <section class="incident-section lessons-learned">
             <h2>Lessons Learned</h2>
-            <p>The incident highlighted the need for proactive server load monitoring and the implementation of scalable solutions to accommodate unexpected spikes in demand.</p>
+            <p>This incident underscored the critical importance of proactive server load monitoring and the need for scalable solutions to accommodate unexpected spikes in demand. It also highlighted the necessity of implementing strict maintenance protocols to minimize the risk of accidental service disruptions. Furthermore, the value of rapid response and effective communication with stakeholders during service outages was reaffirmed, ensuring transparency and trust are maintained.</p>
         </section>
     </article>
 </body>

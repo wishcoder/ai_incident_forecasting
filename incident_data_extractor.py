@@ -28,6 +28,8 @@ class IncidentDataExtractor:
             'Date and Time': self.find_detail_info(soup, "Date and Time:"),
             'Reported By': self.find_detail_info(soup, "Reported By:"),
             'Component Affected': self.find_detail_info(soup, "Component Affected:"),
+            'Root Cause': soup.select_one(".root-cause-analysis p").text.strip() if soup.select_one(
+                ".root-cause-analysis p") else "Not Available",
             'Resolution Steps': " ".join(p.text.strip() for p in soup.select(".resolution-steps > p:not(:has(span))")),
             'Resolved By': self.find_detail_info(soup, "Resolved By:"),
             'Resolution Date and Time': self.find_detail_info(soup, "Resolution Date and Time:"),

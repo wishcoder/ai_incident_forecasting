@@ -8,7 +8,7 @@
         .incident-report { font-family: Arial, sans-serif; }
         .incident-section { margin-bottom: 20px; }
         .incident-title { color: #333; }
-        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned { color: #666; }
+        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned, .root-cause-analysis { color: #666; }
         .detail-label { font-weight: bold; }
         .detail-info { margin-left: 5px; }
     </style>
@@ -22,22 +22,27 @@
             <p><span class="detail-label">Title:</span><span class="detail-info">Router-2 is not reachable</span></p>
             <p><span class="detail-label">Date and Time:</span><span class="detail-info">2023-05-10 11:47</span></p>
             <p><span class="detail-label">Reported By:</span><span class="detail-info">Ethan Wright/Network Operations</span></p>
-            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Router-2</span></p>
+            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Router-2, indirectly affecting Firewall-2, App-3, and App-4</span></p>
         </section>
         <section class="incident-section incident-description">
             <h2>Incident Description</h2>
-            <p>Router-2 became unreachable due to a suspected hardware failure, disrupting external connectivity for App-3 and App-4.</p>
+            <p>Router-2 became unreachable due to a suspected hardware failure, disrupting external connectivity for App-3 and App-4. This unexpected outage prevented access to critical services and applications.</p>
         </section>
         <section class="incident-section impact-analysis">
             <h2>Impact Analysis</h2>
-            <p>The loss of Router-2 connectivity halted all external traffic to App-3 and App-4, significantly impacting user operations and service delivery.</p>
+            <p>The loss of Router-2 connectivity halted all external traffic to App-3 and App-4, significantly impacting user operations and service delivery. The disruption highlighted the critical dependency on Router-2 for external connectivity to these applications.</p>
+        </section>
+        <section class="incident-section root-cause-analysis">
+            <h2>Root Cause</h2>
+            <p>Power failure caused Router-2 to shut down unexpectedly. Subsequent hardware diagnostics confirmed a power supply unit (PSU) failure as the specific cause.</p>
         </section>
         <section class="incident-section resolution-steps">
             <h2>Resolution Steps</h2>
             <p>1. Immediate notification to the hardware team for diagnostics.</p>
-            <p>2. Temporary routing adjustments made to divert traffic through Router-1 while Router-2 was under investigation.</p>
-            <p>3. Hardware fault identified and Router-2 was replaced at 14:30.</p>
-            <p>4. After replacement, Router-2 was brought back online and normal service for App-3 and App-4 was restored by 15:00.</p>
+            <p>2. Temporary routing adjustments made to divert traffic through Router-1 while Router-2 was under investigation, ensuring minimal service disruption.</p>
+            <p>3. Hardware fault identified as a PSU failure, and Router-2 was replaced at 14:30.</p>
+            <p>4. After replacement, comprehensive testing was conducted to ensure Router-2's full operational capacity.</p>
+            <p>5. Router-2 was brought back online, and normal service for App-3 and App-4 was restored by 15:00.</p>
             <p><span class="detail-label">Resolved By:</span><span class="detail-info">Fiona Kelley/Hardware Support Team</span></p>
             <p><span class="detail-label">Resolution Date and Time:</span><span class="detail-info">2023-05-10 15:00</span></p>
         </section>
@@ -47,7 +52,7 @@
         </section>
         <section class="incident-section lessons-learned">
             <h2>Lessons Learned</h2>
-            <p>The incident underlined the importance of having a robust hardware monitoring and failure detection system in place. It also highlighted the need for a quicker hardware replacement process and the effectiveness of having a contingency plan for rerouting traffic during critical hardware failures.</p>
+            <p>This incident underlined the importance of having a robust hardware monitoring and failure detection system in place, particularly for critical network components like routers. It also highlighted the need for a quicker hardware replacement process and the effectiveness of having a contingency plan, such as traffic rerouting capabilities, to maintain service continuity during critical hardware failures. Additionally, the incident emphasized the value of regular power supply unit (PSU) checks and replacements as part of routine maintenance to prevent similar outages.</p>
         </section>
     </article>
 </body>

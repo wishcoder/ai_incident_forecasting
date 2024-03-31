@@ -34,6 +34,10 @@ class TestIncidentDataExtractor(unittest.TestCase):
                         <h2>Impact Analysis</h2>
                         <p>Analysis of the Incident 1's impact.</p>
                     </section>
+                    <section class="incident-section root-cause-analysis">
+                        <h2>Root Cause</h2>
+                        <p>Update applied an incompatible version of a critical security dependency</p>
+                    </section>
                     <section class="incident-section resolution-steps">
                         <h2>Resolution Steps</h2>
                         <p>Step-by-step resolution of Incident 1.</p>
@@ -79,6 +83,10 @@ class TestIncidentDataExtractor(unittest.TestCase):
                     <section class="incident-section impact-analysis">
                         <h2>Impact Analysis</h2>
                         <p>Analysis of the Incident 2's impact.</p>
+                    </section>
+                    <section class="incident-section root-cause-analysis">
+                        <h2>Root Cause</h2>
+                        <p>Update applied an incompatible version of a critical security dependency</p>
                     </section>
                     <section class="incident-section resolution-steps">
                         <h2>Resolution Steps</h2>
@@ -148,6 +156,10 @@ class TestIncidentDataExtractor(unittest.TestCase):
                     <h2>Impact Analysis</h2>
                     <p>Analysis of the incident's impact.</p>
                 </section>
+                <section class="incident-section root-cause-analysis">
+                    <h2>Root Cause</h2>
+                    <p>Update applied an incompatible version of a critical security dependency</p>
+                </section>
                 <section class="incident-section resolution-steps">
                     <h2>Resolution Steps</h2>
                     <p>Step-by-step resolution.</p>
@@ -175,6 +187,7 @@ class TestIncidentDataExtractor(unittest.TestCase):
         self.assertEqual(extracted_data['Date and Time'], '2024-03-29 12:00')
         self.assertEqual(extracted_data['Reported By'], 'John Doe/IT Department')
         self.assertEqual(extracted_data['Component Affected'], 'Web Server')
+        self.assertEqual(extracted_data['Root Cause'], 'Update applied an incompatible version of a critical security dependency')
         self.assertEqual(extracted_data['Resolution Steps'], 'Step-by-step resolution.')
         self.assertEqual(extracted_data['Resolved By'], 'Jane Smith/Resolution Team')
         self.assertEqual(extracted_data['Resolution Date and Time'], '2024-03-30 08:00')
@@ -194,6 +207,8 @@ class TestIncidentDataExtractor(unittest.TestCase):
         self.assertEqual(incidents_data[0]['Date and Time'], '2024-04-01 10:00:00')
         self.assertEqual(incidents_data[0]['Reported By'], 'Reporter 1')
         self.assertEqual(incidents_data[0]['Component Affected'], 'Component 1')
+        self.assertEqual(incidents_data[0]['Root Cause'],
+                         'Update applied an incompatible version of a critical security dependency')
         self.assertEqual(incidents_data[0]['Resolution Steps'], 'Step-by-step resolution of Incident 1.')
         self.assertEqual(incidents_data[0]['Resolved By'], 'Resolver 1')
         self.assertEqual(incidents_data[0]['Resolution Date and Time'], '2024-04-01 12:00:00')
@@ -206,6 +221,8 @@ class TestIncidentDataExtractor(unittest.TestCase):
         self.assertEqual(incidents_data[1]['Date and Time'], '2024-04-02 10:00:00')
         self.assertEqual(incidents_data[1]['Reported By'], 'Reporter 2')
         self.assertEqual(incidents_data[1]['Component Affected'], 'Component 2')
+        self.assertEqual(incidents_data[1]['Root Cause'],
+                         'Update applied an incompatible version of a critical security dependency')
         self.assertEqual(incidents_data[1]['Resolution Steps'], 'Step-by-step resolution of Incident 2.')
         self.assertEqual(incidents_data[1]['Resolved By'], 'Resolver 2')
         self.assertEqual(incidents_data[1]['Resolution Date and Time'], '2024-04-02 12:00:00')

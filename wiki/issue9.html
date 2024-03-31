@@ -8,7 +8,7 @@
         .incident-report { font-family: Arial, sans-serif; }
         .incident-section { margin-bottom: 20px; }
         .incident-title { color: #333; }
-        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned { color: #666; }
+        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned, .root-cause-analysis { color: #666; }
         .detail-label { font-weight: bold; }
         .detail-info { margin-left: 5px; }
     </style>
@@ -22,20 +22,27 @@
             <p><span class="detail-label">Title:</span><span class="detail-info">Firewall-1 Routing All Traffic to App-2</span></p>
             <p><span class="detail-label">Date and Time:</span><span class="detail-info">2023-10-05 11:00</span></p>
             <p><span class="detail-label">Reported By:</span><span class="detail-info">Liam Wong/IT Security</span></p>
-            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Firewall-1</span></p>
+            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Firewall-1, indirectly affecting App-1 and App-2</span></p>
         </section>
         <section class="incident-section incident-description">
             <h2>Incident Description</h2>
-            <p>Due to an error in Firewall-1's configuration, all incoming external traffic was incorrectly directed to App-2, bypassing App-1 entirely.</p>
+            <p>Due to an error in Firewall-1's configuration, all incoming external traffic was incorrectly directed to App-2, bypassing App-1 entirely. This misconfiguration led to App-1 being inaccessible to its intended users and caused an unexpected surge in traffic to App-2, potentially impacting its performance and the user experience.</p>
         </section>
         <section class="incident-section impact-analysis">
             <h2>Impact Analysis</h2>
-            <p>This misdirection resulted in App-1 being inaccessible to its users, while App-2 faced unexpected traffic spikes.</p>
+            <p>The misdirection of traffic resulted in significant service disruption: App-1 was completely inaccessible, affecting its operational functionality and user access, while App-2 faced unexpected traffic spikes, risking overload and performance degradation.</p>
+        </section>
+        <section class="incident-section root-cause-analysis">
+            <h2>Root Cause</h2>
+            <p>The root cause was identified as a misconfigured rule in Firewall-1 that incorrectly prioritized all traffic to App-2, disregarding the established routing protocols for App-1.</p>
         </section>
         <section class="incident-section resolution-steps">
             <h2>Resolution Steps</h2>
-            <p>1. The configuration anomaly was quickly spotted by the IT security team.</p>
-            <p>2. Corrective measures were implemented to redistribute traffic appropriately between App-1 and App-2 by 12:30.</p>
+            <p>1. The configuration anomaly was detected through routine monitoring and immediate alerts from the IT security infrastructure.</p>
+            <p>2. IT Security swiftly initiated a review of the firewall rules and identified the misconfigured settings.</p>
+            <p>3. Corrective measures were implemented to adjust the firewall rules, ensuring balanced and correct distribution of traffic to both App-1 and App-2.</p>
+            <p>4. The corrected configuration was applied, and normal traffic flow was restored by 12:30, with continuous monitoring to ensure the issue was fully resolved.</p>
+            <p>5. A post-incident analysis was conducted to refine the firewall rule update process, incorporating additional checks and balances to prevent recurrence.</p>
             <p><span class="detail-label">Resolved By:</span><span class="detail-info">Emma Patel/IT Security Team</span></p>
             <p><span class="detail-label">Resolution Date and Time:</span><span class="detail-info">2023-10-05 12:30</span></p>
         </section>
@@ -45,7 +52,7 @@
         </section>
         <section class="incident-section lessons-learned">
             <h2>Lessons Learned</h2>
-            <p>The incident reinforced the need for a detailed review and testing of firewall configurations in a controlled environment before deployment to the live network, ensuring all routing behaves as expected.</p>
+            <p>This incident underscored the critical importance of rigorous configuration validation and testing within a controlled environment prior to live deployment. It highlighted the need for detailed review processes for firewall configurations, especially when changes are made, to ensure they align with intended traffic routing protocols. Additionally, the value of rapid detection and response mechanisms was reinforced, demonstrating their effectiveness in minimizing operational disruptions and maintaining service integrity.</p>
         </section>
     </article>
 </body>

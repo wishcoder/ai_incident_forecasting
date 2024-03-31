@@ -8,7 +8,7 @@
         .incident-report { font-family: Arial, sans-serif; }
         .incident-section { margin-bottom: 20px; }
         .incident-title { color: #333; }
-        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned { color: #666; }
+        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned, .root-cause-analysis { color: #666; }
         .detail-label { font-weight: bold; }
         .detail-info { margin-left: 5px; }
     </style>
@@ -22,22 +22,27 @@
             <p><span class="detail-label">Title:</span><span class="detail-info">Router-2 Configuration Changes</span></p>
             <p><span class="detail-label">Date and Time:</span><span class="detail-info">2023-06-15 09:30</span></p>
             <p><span class="detail-label">Reported By:</span><span class="detail-info">Gregory Hines/IT Support</span></p>
-            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Router-2</span></p>
+            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Router-2, indirectly affecting Firewall-2, App-3, and App-4</span></p>
         </section>
         <section class="incident-section incident-description">
             <h2>Incident Description</h2>
-            <p>During a scheduled update, configuration changes were applied to Router-2, inadvertently blocking external access to App-3 and App-4.</p>
+            <p>During a scheduled update, configuration changes were applied to Router-2, inadvertently blocking external access to App-3 and App-4 due to an incorrect subnet mask setting.</p>
         </section>
         <section class="incident-section impact-analysis">
             <h2>Impact Analysis</h2>
-            <p>The misconfiguration resulted in a complete loss of service for external users of App-3 and App-4, affecting critical business operations.</p>
+            <p>The misconfiguration resulted in a complete loss of service for external users of App-3 and App-4, affecting critical business operations and disrupting service delivery.</p>
+        </section>
+        <section class="incident-section root-cause-analysis">
+            <h2>Root Cause</h2>
+            <p>An incorrect subnet mask was applied during Router-2's configuration update, leading to routing issues that prevented external access to App-3 and App-4.</p>
         </section>
         <section class="incident-section resolution-steps">
             <h2>Resolution Steps</h2>
-            <p>1. The issue was detected through automated monitoring alerts.</p>
+            <p>1. The issue was detected through automated monitoring alerts and immediate manual checks by the IT Support team.</p>
             <p>2. IT Support initiated an emergency protocol to assess and rectify the configuration errors.</p>
-            <p>3. Configuration changes were rolled back to the last known good configuration at 10:15.</p>
-            <p>4. Full service was restored to App-3 and App-4 by 10:45, and a review was scheduled to prevent future occurrences.</p>
+            <p>3. Configuration changes were rolled back to the last known good configuration at 10:15, following a quick review to confirm the rollback would not introduce other issues.</p>
+            <p>4. Full service was restored to App-3 and App-4 by 10:45, after thorough testing to ensure connectivity was fully functional.</p>
+            <p>5. A post-incident review was scheduled to discuss the incident and implement measures to prevent future occurrences.</p>
             <p><span class="detail-label">Resolved By:</span><span class="detail-info">Hannah Klein/Network Operations Team</span></p>
             <p><span class="detail-label">Resolution Date and Time:</span><span class="detail-info">2023-06-15 10:45</span></p>
         </section>
@@ -47,7 +52,7 @@
         </section>
         <section class="incident-section lessons-learned">
             <h2>Lessons Learned</h2>
-            <p>This incident emphasized the need for a more rigorous pre-deployment testing phase for any configuration changes, especially those affecting critical network infrastructure. It also highlighted the importance of having a quick rollback strategy for immediately addressing any issues that arise post-deployment.</p>
+            <p>This incident emphasized the critical need for a more rigorous pre-deployment testing phase for any configuration changes to critical network infrastructure, ensuring that all changes are vetted through a comprehensive review process. It also highlighted the importance of having a quick and effective rollback strategy for immediately addressing any issues that arise post-deployment, minimizing downtime and service disruption. The incident further underlined the value of automated monitoring systems in quickly detecting and alerting on operational anomalies.</p>
         </section>
     </article>
 </body>

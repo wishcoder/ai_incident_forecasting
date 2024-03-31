@@ -8,7 +8,7 @@
         .incident-report { font-family: Arial, sans-serif; }
         .incident-section { margin-bottom: 20px; }
         .incident-title { color: #333; }
-        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned { color: #666; }
+        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned, .root-cause-analysis { color: #666; }
         .detail-label { font-weight: bold; }
         .detail-info { margin-left: 5px; }
     </style>
@@ -22,20 +22,26 @@
             <p><span class="detail-label">Title:</span><span class="detail-info">App-2 Configuration Changes</span></p>
             <p><span class="detail-label">Date and Time:</span><span class="detail-info">2025-04-18 16:20</span></p>
             <p><span class="detail-label">Reported By:</span><span class="detail-info">Molly Clock/IT Support</span></p>
-            <p><span class="detail-label">Component Affected:</span><span class="detail-info">App-2</span></p>
+            <p><span class="detail-label">Component Affected:</span><span class="detail-info">App-2, specifically its user access and external service integration</span></p>
         </section>
         <section class="incident-section incident-description">
             <h2>Incident Description</h2>
-            <p>Recent configuration changes to App-2's system settings resulted in unintended access restrictions for several users.</p>
+            <p>Following recent updates to App-2's configuration settings aimed at enhancing system performance, unintended access restrictions were imposed on several users, disrupting their interaction with the application.</p>
         </section>
         <section class="incident-section impact-analysis">
             <h2>Impact Analysis</h2>
-            <p>The access restrictions led to a temporary loss of functionality for affected users, impacting user experience and operational efficiency.</p>
+            <p>The unintended access restrictions resulted in a temporary loss of critical functionality for affected users, significantly impacting their user experience and the operational efficiency of App-2.</p>
+        </section>
+        <section class="incident-section root-cause-analysis">
+            <h2>Root Cause</h2>
+            <p>An in-depth investigation revealed that the configuration update erroneously included an invalid external service endpoint. This misconfiguration led to the breaking of essential functionalities within App-2, directly affecting user access.</p>
         </section>
         <section class="incident-section resolution-steps">
             <h2>Resolution Steps</h2>
-            <p>1. The configuration changes were promptly reviewed by the IT support team.</p>
-            <p>2. Adjustments were made to restore access, with full functionality returning to all users by 17:45.</p>
+            <p>1. The IT support team, upon identifying the issue, initiated a comprehensive review of the recent configuration changes to pinpoint the cause of the access restrictions.</p>
+            <p>2. Corrective actions were swiftly implemented to rectify the invalid endpoint configuration, thereby restoring the intended access and functionality to all affected users.</p>
+            <p>3. Full functionality was confirmed to have returned to all users by 17:45, following the successful application of the configuration adjustments.</p>
+            <p>4. Additional measures, including enhanced configuration change validation processes, were introduced to prevent recurrence of similar issues.</p>
             <p><span class="detail-label">Resolved By:</span><span class="detail-info">Elliot Reid/IT Support Team</span></p>
             <p><span class="detail-label">Resolution Date and Time:</span><span class="detail-info">2025-04-18 17:45</span></p>
         </section>
@@ -45,7 +51,7 @@
         </section>
         <section class="incident-section lessons-learned">
             <h2>Lessons Learned</h2>
-            <p>Highlighted the importance of validating all configuration changes against user access policies to ensure no unintended restrictions are applied.</p>
+            <p>This incident has underscored the critical importance of implementing a robust validation process for all configuration changes, particularly those affecting user access and external integrations. It highlighted the necessity for rigorous pre-deployment testing in a controlled environment to identify and rectify potential issues before they impact the production environment. Furthermore, the incident emphasized the value of maintaining clear and comprehensive documentation of all system configurations to facilitate quick resolution of any future discrepancies or issues.</p>
         </section>
     </article>
 </body>

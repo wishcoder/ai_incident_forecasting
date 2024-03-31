@@ -8,7 +8,7 @@
         .incident-report { font-family: Arial, sans-serif; }
         .incident-section { margin-bottom: 20px; }
         .incident-title { color: #333; }
-        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned { color: #666; }
+        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned, .root-cause-analysis { color: #666; }
         .detail-label { font-weight: bold; }
         .detail-info { margin-left: 5px; }
     </style>
@@ -22,20 +22,26 @@
             <p><span class="detail-label">Title:</span><span class="detail-info">Service-2 is not accessible</span></p>
             <p><span class="detail-label">Date and Time:</span><span class="detail-info">2024-03-05 13:20</span></p>
             <p><span class="detail-label">Reported By:</span><span class="detail-info">Jordan Sullivan/IT Support</span></p>
-            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Service-2</span></p>
+            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Service-2, indirectly affecting App-1 and App-2</span></p>
         </section>
         <section class="incident-section incident-description">
             <h2>Incident Description</h2>
-            <p>Service-2 became inaccessible due to an unexpected server failure, impacting data processing for App-1 and App-2.</p>
+            <p>Service-2 became inaccessible due to an unexpected server failure, impacting data processing and functionality for App-1 and App-2. This failure disrupted the critical data flow between Service-1, Service-2, and the database, leading to significant operational delays.</p>
         </section>
         <section class="incident-section impact-analysis">
             <h2>Impact Analysis</h2>
-            <p>The inaccessibility of Service-2 disrupted the data flow between Service-1 and the database, affecting the functionality of App-1 and App-2.</p>
+            <p>The inaccessibility of Service-2 caused a halt in operations for App-1 and App-2, affecting end-user transactions and data processing capabilities.</p>
+        </section>
+        <section class="incident-section root-cause-analysis">
+            <h2>Root Cause</h2>
+            <p>An unhandled exception within the codebase of Service-2 led to a server crash, highlighting a critical vulnerability in error handling and resource management.</p>
         </section>
         <section class="incident-section resolution-steps">
             <h2>Resolution Steps</h2>
-            <p>1. IT support conducted immediate diagnostics to identify the cause of the server failure.</p>
-            <p>2. A backup server was deployed to restore Service-2's functionality by 14:50.</p>
+            <p>1. IT support initiated immediate diagnostics to identify the cause of the server failure and assess the impact on connected services.</p>
+            <p>2. A backup server was promptly deployed, and Service-2's functionality was restored, minimizing the downtime experienced by App-1 and App-2.</p>
+            <p>3. Post-restoration, a thorough code review was conducted to identify and rectify the unhandled exception, preventing future occurrences.</p>
+            <p>4. Enhanced server health monitoring tools were implemented to provide early warnings of similar issues.</p>
             <p><span class="detail-label">Resolved By:</span><span class="detail-info">Keith Dudemeister/IT Operations</span></p>
             <p><span class="detail-label">Resolution Date and Time:</span><span class="detail-info">2024-03-05 14:50</span></p>
         </section>
@@ -45,7 +51,7 @@
         </section>
         <section class="incident-section lessons-learned">
             <h2>Lessons Learned</h2>
-            <p>Underlined the necessity for robust server health monitoring and the importance of having an efficient backup strategy to ensure continuity of service.</p>
+            <p>This incident underlined the necessity for comprehensive server health monitoring and the importance of implementing an efficient and reliable backup strategy. It also highlighted the need for rigorous code testing and review processes to identify potential unhandled exceptions or vulnerabilities that could lead to service disruptions. Additionally, the incident reinforced the value of having a rapid response plan for IT support teams to ensure continuity of service and minimize operational impact.</p>
         </section>
     </article>
 </body>

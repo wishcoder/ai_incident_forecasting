@@ -8,7 +8,7 @@
         .incident-report { font-family: Arial, sans-serif; }
         .incident-section { margin-bottom: 20px; }
         .incident-title { color: #333; }
-        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned { color: #666; }
+        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned, .root-cause-analysis { color: #666; }
         .detail-label { font-weight: bold; }
         .detail-info { margin-left: 5px; }
     </style>
@@ -22,20 +22,26 @@
             <p><span class="detail-label">Title:</span><span class="detail-info">Service-3 is not accessible</span></p>
             <p><span class="detail-label">Date and Time:</span><span class="detail-info">2024-09-10 11:45</span></p>
             <p><span class="detail-label">Reported By:</span><span class="detail-info">Kelso Zabielski/IT Operations</span></p>
-            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Service-3</span></p>
+            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Service-3, indirectly affecting App-3 and App-4</span></p>
         </section>
         <section class="incident-section incident-description">
             <h2>Incident Description</h2>
-            <p>Service-3 became unexpectedly inaccessible this morning, disrupting critical data services for App-3 and App-4. Initial assessments suggest a network configuration issue.</p>
+            <p>Service-3 became unexpectedly inaccessible due to a network partition this morning, disrupting critical data services for App-3 and App-4. This isolation from its consumers prevented any data interactions between the service and the applications, significantly impacting their operational capabilities and user experience.</p>
         </section>
         <section class="incident-section impact-analysis">
             <h2>Impact Analysis</h2>
-            <p>The outage of Service-3 has halted all data interactions between the affected applications and the database, significantly impacting operational capabilities and user experience.</p>
+            <p>The sudden outage of Service-3 caused a halt in all data processing and retrieval operations for App-3 and App-4, leading to service degradation and affecting end-users' ability to access and utilize the applications effectively.</p>
+        </section>
+        <section class="incident-section root-cause-analysis">
+            <h2>Root Cause</h2>
+            <p>An in-depth investigation revealed that the inaccessibility of Service-3 was due to a misconfigured network router, which created a network partition, isolating Service-3 from its intended network segment.</p>
         </section>
         <section class="incident-section resolution-steps">
             <h2>Resolution Steps</h2>
-            <p>1. Network administrators were immediately alerted to the service disruption.</p>
-            <p>2. A misconfigured network router was identified as the cause and corrected, restoring access to Service-3 by 13:30.</p>
+            <p>1. The service disruption was quickly detected through our network monitoring systems, prompting an immediate investigation by network administrators.</p>
+            <p>2. The root cause was identified as a misconfiguration in one of the network routers. Corrective actions were taken to reconfigure the router settings properly, eliminating the network partition and restoring full connectivity to Service-3.</p>
+            <p>3. Service-3 was closely monitored following the correction to ensure stability and full operational functionality, with service fully restored by 13:30.</p>
+            <p>4. Additional measures, including a review and update of network configuration management practices, were implemented to prevent similar incidents.</p>
             <p><span class="detail-label">Resolved By:</span><span class="detail-info">Bob Kelso/Network Administration</span></p>
             <p><span class="detail-label">Resolution Date and Time:</span><span class="detail-info">2024-09-10 13:30</span></p>
         </section>
@@ -45,7 +51,7 @@
         </section>
         <section class="incident-section lessons-learned">
             <h2>Lessons Learned</h2>
-            <p>Emphasized the critical need for regular network configuration audits and the implementation of monitoring tools to quickly detect and address service accessibility issues.</p>
+            <p>This incident underscored the critical need for continuous and proactive network configuration audits and the implementation of advanced monitoring tools capable of quickly detecting and alerting on network partitions and other connectivity issues. It also highlighted the importance of having a rapid response mechanism in place to address and resolve network configuration errors efficiently, minimizing the impact on service availability and maintaining a high level of user satisfaction.</p>
         </section>
     </article>
 </body>

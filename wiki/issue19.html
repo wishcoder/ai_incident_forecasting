@@ -8,7 +8,7 @@
         .incident-report { font-family: Arial, sans-serif; }
         .incident-section { margin-bottom: 20px; }
         .incident-title { color: #333; }
-        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned { color: #666; }
+        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned, .root-cause-analysis { color: #666; }
         .detail-label { font-weight: bold; }
         .detail-info { margin-left: 5px; }
     </style>
@@ -22,20 +22,26 @@
             <p><span class="detail-label">Title:</span><span class="detail-info">Service-1 Changes</span></p>
             <p><span class="detail-label">Date and Time:</span><span class="detail-info">2024-08-15 14:30</span></p>
             <p><span class="detail-label">Reported By:</span><span class="detail-info">Jordan Sullivan/Development Team</span></p>
-            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Service-1</span></p>
+            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Service-1, indirectly affecting App-1 and App-2</span></p>
         </section>
         <section class="incident-section incident-description">
             <h2>Incident Description</h2>
-            <p>Modifications to Service-1's codebase inadvertently introduced a data processing error, affecting its interaction with App-1 and App-2.</p>
+            <p>Recent modifications to the codebase of Service-1 inadvertently introduced a data processing error, significantly affecting its interaction with App-1 and App-2. This error led to compromised efficiency in data transactions, resulting in delayed responses and processing failures within the applications.</p>
         </section>
         <section class="incident-section impact-analysis">
             <h2>Impact Analysis</h2>
-            <p>The error compromised the efficiency of data transactions between Service-1 and the applications, leading to delayed responses and processing failures.</p>
+            <p>The malfunction in Service-1 disrupted the normal flow of data, directly impacting the operational capabilities of App-1 and App-2. This resulted in a noticeable degradation of service quality, affecting end-user experience and trust.</p>
+        </section>
+        <section class="incident-section root-cause-analysis">
+            <h2>Root Cause</h2>
+            <p>A detailed analysis identified that the recent update to Service-1 contained a bug affecting data retrieval functions, which was not caught in the initial testing phase.</p>
         </section>
         <section class="incident-section resolution-steps">
             <h2>Resolution Steps</h2>
-            <p>1. The issue was detected during routine quality assurance testing.</p>
-            <p>2. Developers promptly addressed the coding error, implementing a fix to restore Service-1's functionality by 16:00.</p>
+            <p>1. The development team was alerted to the issue through automated alerts and immediate feedback from affected services.</p>
+            <p>2. A rapid response was initiated, with developers working to diagnose and address the coding error. A fix was developed and tested to ensure it resolved the issue without introducing new problems.</p>
+            <p>3. The fix was deployed to the production environment, successfully restoring full functionality to Service-1 and consequently to App-1 and App-2 by 16:00.</p>
+            <p>4. Post-deployment, the system was closely monitored to ensure stability and a comprehensive review was conducted to prevent similar incidents.</p>
             <p><span class="detail-label">Resolved By:</span><span class="detail-info">Christopher Turk/Software Engineering</span></p>
             <p><span class="detail-label">Resolution Date and Time:</span><span class="detail-info">2024-08-15 16:00</span></p>
         </section>
@@ -45,7 +51,7 @@
         </section>
         <section class="incident-section lessons-learned">
             <h2>Lessons Learned</h2>
-            <p>Underlined the importance of thorough code review and testing before deployment, especially for updates affecting critical service components.</p>
+            <p>This incident underscored the critical importance of implementing a rigorous code review and testing process prior to deploying updates, especially for changes affecting critical service components. It highlighted the need for enhanced quality assurance measures, including automated testing and staging environment validations, to identify and rectify potential issues before they impact production services. Additionally, the value of a swift and coordinated response to service disruptions was reaffirmed, emphasizing the need for preparedness and effective communication within the development and operations teams.</p>
         </section>
     </article>
 </body>

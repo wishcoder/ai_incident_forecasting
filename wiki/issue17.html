@@ -8,7 +8,7 @@
         .incident-report { font-family: Arial, sans-serif; }
         .incident-section { margin-bottom: 20px; }
         .incident-title { color: #333; }
-        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned { color: #666; }
+        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned, .root-cause-analysis { color: #666; }
         .detail-label { font-weight: bold; }
         .detail-info { margin-left: 5px; }
     </style>
@@ -22,20 +22,26 @@
             <p><span class="detail-label">Title:</span><span class="detail-info">Service-4 Changes</span></p>
             <p><span class="detail-label">Date and Time:</span><span class="detail-info">2024-06-22 15:45</span></p>
             <p><span class="detail-label">Reported By:</span><span class="detail-info">Laverne Roberts/Software Development</span></p>
-            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Service-4</span></p>
+            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Service-4, indirectly affecting App-3 and App-4</span></p>
         </section>
         <section class="incident-section incident-description">
             <h2>Incident Description</h2>
-            <p>Recent updates to Service-4 introduced a critical bug affecting data exchange with the database, impacting App-3 and App-4's functionality.</p>
+            <p>Recent updates to Service-4 inadvertently introduced a critical bug that affected data exchange with the database, significantly impacting the functionality and performance of App-3 and App-4.</p>
         </section>
         <section class="incident-section impact-analysis">
             <h2>Impact Analysis</h2>
-            <p>The bug in Service-4 disrupted normal data processing, leading to significant performance degradation for App-3 and App-4.</p>
+            <p>The bug in Service-4 disrupted normal data processing and exchange, leading to data inconsistencies and significant performance degradation for App-3 and App-4, affecting end-user experience and operational efficiency.</p>
+        </section>
+        <section class="incident-section root-cause-analysis">
+            <h2>Root Cause</h2>
+            <p>An analysis revealed that the configuration changes in Service-4 made during the recent update included incompatible API updates. These changes broke the existing integration with Service-3 and the database, leading to the observed issues.</p>
         </section>
         <section class="incident-section resolution-steps">
             <h2>Resolution Steps</h2>
-            <p>1. The issue was quickly identified by the software development team during routine checks.</p>
-            <p>2. A hotfix was developed and deployed to rectify the bug in Service-4 by 17:30.</p>
+            <p>1. The software development team quickly identified the issue through routine system checks and immediate feedback from affected services.</p>
+            <p>2. A targeted hotfix was developed to address the specific bug introduced by the Service-4 update. This hotfix was tested rigorously in a controlled environment to ensure it resolved the issue without introducing new problems.</p>
+            <p>3. The hotfix was deployed to the production environment, successfully rectifying the bug in Service-4 and restoring full functionality to App-3 and App-4 by 17:30.</p>
+            <p>4. Post-deployment, additional monitoring was implemented to ensure the stability of the service and to quickly identify any further issues arising from the changes.</p>
             <p><span class="detail-label">Resolved By:</span><span class="detail-info">Carla Espinosa/Software Development</span></p>
             <p><span class="detail-label">Resolution Date and Time:</span><span class="detail-info">2024-06-22 17:30</span></p>
         </section>
@@ -45,7 +51,7 @@
         </section>
         <section class="incident-section lessons-learned">
             <h2>Lessons Learned</h2>
-            <p>Emphasized the importance of comprehensive testing before deploying updates to production environments. The incident also highlighted the need for a rapid response mechanism to address unforeseen issues post-deployment.</p>
+            <p>This incident underscored the critical importance of conducting comprehensive testing before deploying updates to production environments, ensuring that all system integrations remain functional and compatible. It also highlighted the need for a rapid response mechanism to address unforeseen issues post-deployment, minimizing the impact on service availability and maintaining trust with end-users.</p>
         </section>
     </article>
 </body>

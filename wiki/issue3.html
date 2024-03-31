@@ -8,7 +8,7 @@
         .incident-report { font-family: Arial, sans-serif; }
         .incident-section { margin-bottom: 20px; }
         .incident-title { color: #333; }
-        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned { color: #666; }
+        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned, .root-cause-analysis { color: #666; }
         .detail-label { font-weight: bold; }
         .detail-info { margin-left: 5px; }
     </style>
@@ -22,7 +22,7 @@
             <p><span class="detail-label">Title:</span><span class="detail-info">Router-1 Configuration Changes</span></p>
             <p><span class="detail-label">Date and Time:</span><span class="detail-info">2023-04-05 14:20</span></p>
             <p><span class="detail-label">Reported By:</span><span class="detail-info">Cynthia Moore/IT Support</span></p>
-            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Router-1</span></p>
+            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Router-1, indirectly affecting Firewall-1, App-1, and App-2</span></p>
         </section>
         <section class="incident-section incident-description">
             <h2>Incident Description</h2>
@@ -30,13 +30,18 @@
         </section>
         <section class="incident-section impact-analysis">
             <h2>Impact Analysis</h2>
-            <p>The configuration changes disrupted normal operations, preventing external access to App-1 and App-2. This incident affected user transactions and data processing capabilities.</p>
+            <p>The configuration changes disrupted normal operations, preventing external access to App-1 and App-2. This incident affected user transactions and data processing capabilities, highlighting the critical nature of Router-1 in the network infrastructure.</p>
+        </section>
+        <section class="incident-section root-cause-analysis">
+            <h2>Root Cause</h2>
+            <p>Incorrect Router-1 configuration update applied, which included invalid routing rules and inadvertently disrupted the traffic flow to Firewall-1, thereby affecting App-1 and App-2.</p>
         </section>
         <section class="incident-section resolution-steps">
             <h2>Resolution Steps</h2>
             <p>1. The issue was identified as a misconfiguration during a routine review.</p>
             <p>2. Configuration changes were rolled back to the previous stable state at 15:00.</p>
-            <p>3. Full connectivity for App-1 and App-2 was restored by 15:30.</p>
+            <p>3. Full connectivity for App-1 and App-2 was restored by 15:30, after confirming the correct traffic flow through Firewall-1.</p>
+            <p>4. Conducted a post-mortem analysis to understand the missteps and implement safeguards.</p>
             <p><span class="detail-label">Resolved By:</span><span class="detail-info">David Lee/Network Engineering</span></p>
             <p><span class="detail-label">Resolution Date and Time:</span><span class="detail-info">2023-04-05 15:30</span></p>
         </section>
@@ -46,7 +51,7 @@
         </section>
         <section class="incident-section lessons-learned">
             <h2>Lessons Learned</h2>
-            <p>The incident highlighted the need for stricter change management protocols and pre-approval processes for any configuration changes to critical network components. Additionally, it underscored the importance of immediate rollback capabilities and the need for comprehensive logging of all changes.</p>
+            <p>The incident highlighted the need for stricter change management protocols, including pre-approval processes for any configuration changes to critical network components. It underscored the importance of immediate rollback capabilities, comprehensive logging of all changes, and enhanced training for IT staff on the potential impacts of configuration changes. Additionally, the incident emphasized the need for a robust validation process post-configuration change to ensure network stability and service availability.</p>
         </section>
     </article>
 </body>

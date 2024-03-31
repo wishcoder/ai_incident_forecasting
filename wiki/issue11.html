@@ -8,7 +8,7 @@
         .incident-report { font-family: Arial, sans-serif; }
         .incident-section { margin-bottom: 20px; }
         .incident-title { color: #333; }
-        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned { color: #666; }
+        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned, .root-cause-analysis { color: #666; }
         .detail-label { font-weight: bold; }
         .detail-info { margin-left: 5px; }
     </style>
@@ -22,21 +22,26 @@
             <p><span class="detail-label">Title:</span><span class="detail-info">Firewall-2 Configuration Changes</span></p>
             <p><span class="detail-label">Date and Time:</span><span class="detail-info">2023-12-05 14:45</span></p>
             <p><span class="detail-label">Reported By:</span><span class="detail-info">Michael Chen/IT Security</span></p>
-            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Firewall-2</span></p>
+            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Firewall-2, indirectly affecting App-3 and App-4</span></p>
         </section>
         <section class="incident-section incident-description">
             <h2>Incident Description</h2>
-            <p>Unauthorized configuration changes to Firewall-2 led to a temporary disruption in service for App-3 and App-4.</p>
+            <p>Unauthorized configuration changes to Firewall-2 led to a temporary disruption in service for App-3 and App-4, causing a partial network outage and affecting external access to these applications.</p>
         </section>
         <section class="incident-section impact-analysis">
             <h2>Impact Analysis</h2>
-            <p>The configuration changes caused a partial network outage, affecting external access to App-3 and App-4.</p>
+            <p>The configuration changes inadvertently blocked critical ports required for accessing App-3 and App-4, leading to significant operational disruptions.</p>
+        </section>
+        <section class="incident-section root-cause-analysis">
+            <h2>Root Cause</h2>
+            <p>An investigation revealed that the configuration update to Firewall-2, which inadvertently blocked necessary ports, was due to unauthorized changes made by an unidentified internal source.</p>
         </section>
         <section class="incident-section resolution-steps">
             <h2>Resolution Steps</h2>
-            <p>1. The unauthorized changes were detected through routine security monitoring.</p>
-            <p>2. Firewall-2 configurations were immediately reviewed and corrected by 15:30.</p>
-            <p>3. Full functionality for App-3 and App-4 was restored, and additional security measures were implemented to prevent unauthorized access.</p>
+            <p>1. The unauthorized changes were detected through routine security monitoring and alerts.</p>
+            <p>2. Immediate action was taken to review and correct the Firewall-2 configurations, ensuring all necessary ports for App-3 and App-4 were open and accessible by 15:30.</p>
+            <p>3. Full functionality for App-3 and App-4 was restored, followed by a comprehensive security review to enhance measures preventing unauthorized access and changes.</p>
+            <p>4. Additional training and awareness programs were scheduled for IT staff to reinforce the importance of secure configuration management and oversight.</p>
             <p><span class="detail-label">Resolved By:</span><span class="detail-info">Sophie Turner/Network Security Team</span></p>
             <p><span class="detail-label">Resolution Date and Time:</span><span class="detail-info">2023-12-05 15:30</span></p>
         </section>
@@ -46,7 +51,7 @@
         </section>
         <section class="incident-section lessons-learned">
             <h2>Lessons Learned</h2>
-            <p>Emphasized the importance of stringent access controls and regular audits of firewall configurations to detect and rectify unauthorized changes promptly.</p>
+            <p>This incident emphasized the critical importance of stringent access controls, regular configuration audits, and the need for a robust change management process to detect and rectify unauthorized changes promptly. It also highlighted the value of continuous education and training for all IT staff on security best practices and the management of network security devices.</p>
         </section>
     </article>
 </body>

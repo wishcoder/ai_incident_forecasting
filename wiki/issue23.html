@@ -8,7 +8,7 @@
         .incident-report { font-family: Arial, sans-serif; }
         .incident-section { margin-bottom: 20px; }
         .incident-title { color: #333; }
-        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned { color: #666; }
+        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned, .root-cause-analysis { color: #666; }
         .detail-label { font-weight: bold; }
         .detail-info { margin-left: 5px; }
     </style>
@@ -22,20 +22,26 @@
             <p><span class="detail-label">Title:</span><span class="detail-info">App-2 is not accessible</span></p>
             <p><span class="detail-label">Date and Time:</span><span class="detail-info">2024-12-20 07:45</span></p>
             <p><span class="detail-label">Reported By:</span><span class="detail-info">Perry Cox/IT Support</span></p>
-            <p><span class="detail-label">Component Affected:</span><span class="detail-info">App-2</span></p>
+            <p><span class="detail-label">Component Affected:</span><span class="detail-info">App-2, specifically its backend services and database</span></p>
         </section>
         <section class="incident-section incident-description">
             <h2>Incident Description</h2>
-            <p>An overnight update to App-2's backend services resulted in a critical failure, rendering the application inaccessible to users.</p>
+            <p>An overnight update intended to enhance App-2's backend services inadvertently introduced a critical failure, resulting in the application becoming completely inaccessible to all users. This issue has significantly disrupted essential services and functionalities provided by App-2.</p>
         </section>
         <section class="incident-section impact-analysis">
             <h2>Impact Analysis</h2>
-            <p>This failure has disrupted essential services provided by App-2, affecting both internal operations and customer-facing functionalities.</p>
+            <p>The inaccessibility of App-2 has led to a halt in all user transactions and data processing activities, critically affecting both internal operations and the delivery of customer-facing services, thereby impacting overall business continuity and customer satisfaction.</p>
+        </section>
+        <section class="incident-section root-cause-analysis">
+            <h2>Root Cause</h2>
+            <p>Detailed analysis identified that the failure was due to a corrupt database index caused by the latest update, which was not detected during the initial deployment process.</p>
         </section>
         <section class="incident-section resolution-steps">
             <h2>Resolution Steps</h2>
-            <p>1. The development team was mobilized to diagnose the failure.</p>
-            <p>2. A rollback to the pre-update state was executed, and App-2's services were fully restored by 09:30.</p>
+            <p>1. Upon detection of the issue, the IT support team immediately alerted the development team, who began an urgent investigation into the cause of the failure.</p>
+            <p>2. The development team identified the corrupt database index as the root cause and decided to perform a rollback to the application's state before the update to quickly restore service functionality.</p>
+            <p>3. App-2's services were fully restored, and operational status was achieved by 09:30, following the successful rollback and verification of system integrity and performance.</p>
+            <p>4. Post-incident, a review of the update and deployment procedures was conducted to strengthen the testing and validation processes, particularly focusing on database integrity and application stability.</p>
             <p><span class="detail-label">Resolved By:</span><span class="detail-info">Christopher Turk/Development Team</span></p>
             <p><span class="detail-label">Resolution Date and Time:</span><span class="detail-info">2024-12-20 09:30</span></p>
         </section>
@@ -45,7 +51,7 @@
         </section>
         <section class="incident-section lessons-learned">
             <h2>Lessons Learned</h2>
-            <p>Emphasized the critical need for exhaustive testing of updates in a staging environment and the establishment of a clear rollback procedure for quickly mitigating issues arising from updates.</p>
+            <p>This incident has highlighted the critical importance of implementing comprehensive testing and validation processes for all updates, especially those involving significant changes to backend services and database structures. It emphasized the need for a robust rollback strategy to quickly mitigate unforeseen issues post-deployment. Additionally, the incident underscored the value of continuous monitoring and rapid response capabilities to ensure high availability and reliability of critical business applications.</p>
         </section>
     </article>
 </body>

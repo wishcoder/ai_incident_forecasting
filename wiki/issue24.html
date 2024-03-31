@@ -8,7 +8,7 @@
         .incident-report { font-family: Arial, sans-serif; }
         .incident-section { margin-bottom: 20px; }
         .incident-title { color: #333; }
-        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned { color: #666; }
+        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned, .root-cause-analysis { color: #666; }
         .detail-label { font-weight: bold; }
         .detail-info { margin-left: 5px; }
     </style>
@@ -22,20 +22,26 @@
             <p><span class="detail-label">Title:</span><span class="detail-info">App-3 is not accessible</span></p>
             <p><span class="detail-label">Date and Time:</span><span class="detail-info">2025-01-10 08:15</span></p>
             <p><span class="detail-label">Reported By:</span><span class="detail-info">Doug Murphy/IT Support</span></p>
-            <p><span class="detail-label">Component Affected:</span><span class="detail-info">App-3</span></p>
+            <p><span class="detail-label">Component Affected:</span><span class="detail-info">App-3, directly impacting user access and service delivery</span></p>
         </section>
         <section class="incident-section incident-description">
             <h2>Incident Description</h2>
-            <p>App-3 became unexpectedly inaccessible due to a configuration error during a routine update process.</p>
+            <p>During a routine update process, a configuration error occurred, resulting in App-3 becoming unexpectedly inaccessible to all users. This issue has led to a significant disruption in services, directly affecting critical business operations and user experience.</p>
         </section>
         <section class="incident-section impact-analysis">
             <h2>Impact Analysis</h2>
-            <p>The inaccessibility of App-3 has led to a significant disruption in services for users, affecting critical business operations.</p>
+            <p>The sudden inaccessibility of App-3 disrupted essential services, leading to operational delays and negatively impacting the overall productivity and satisfaction of our user base.</p>
+        </section>
+        <section class="incident-section root-cause-analysis">
+            <h2>Root Cause</h2>
+            <p>An investigation revealed that an automated script, which was intended to manage resources for another application, inadvertently stopped App-3. This misdirected action was due to a misconfiguration in the script's target parameters.</p>
         </section>
         <section class="incident-section resolution-steps">
             <h2>Resolution Steps</h2>
-            <p>1. The error was quickly identified by the IT support team.</p>
-            <p>2. Corrective measures were implemented, restoring full access to App-3 by 09:45.</p>
+            <p>1. Immediate action was taken by the IT support team upon notification of the issue, with a detailed analysis conducted to identify the root cause.</p>
+            <p>2. The erroneous script was corrected, and measures were taken to prevent similar misconfigurations in the future.</p>
+            <p>3. App-3 was promptly restarted, with all services verified to be fully functional and accessible to users by 09:45.</p>
+            <p>4. Post-resolution, a review of update and deployment procedures was initiated to enhance the robustness of our IT operations and minimize the risk of similar incidents.</p>
             <p><span class="detail-label">Resolved By:</span><span class="detail-info">Lloyd Slawski/IT Operations</span></p>
             <p><span class="detail-label">Resolution Date and Time:</span><span class="detail-info">2025-01-10 09:45</span></p>
         </section>
@@ -45,7 +51,7 @@
         </section>
         <section class="incident-section lessons-learned">
             <h2>Lessons Learned</h2>
-            <p>Highlighted the importance of thorough pre-deployment testing for updates and the need for rapid response capabilities to address access issues promptly.</p>
+            <p>This incident has underscored the critical importance of conducting thorough pre-deployment testing for all updates and changes, especially those involving automated scripts and configurations that could impact multiple services. It also highlighted the necessity for having rapid response and recovery protocols in place, ensuring that any access issues can be promptly addressed to maintain service continuity and minimize operational disruptions. Additionally, the incident emphasized the value of clear documentation and strict adherence to change management processes to safeguard against unintended consequences of routine maintenance activities.</p>
         </section>
     </article>
 </body>

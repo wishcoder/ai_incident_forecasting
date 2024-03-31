@@ -8,7 +8,7 @@
         .incident-report { font-family: Arial, sans-serif; }
         .incident-section { margin-bottom: 20px; }
         .incident-title { color: #333; }
-        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned { color: #666; }
+        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned, .root-cause-analysis { color: #666; }
         .detail-label { font-weight: bold; }
         .detail-info { margin-left: 5px; }
     </style>
@@ -22,20 +22,26 @@
             <p><span class="detail-label">Title:</span><span class="detail-info">Firewall-1 Routing All Traffic to App-1</span></p>
             <p><span class="detail-label">Date and Time:</span><span class="detail-info">2023-09-14 08:30</span></p>
             <p><span class="detail-label">Reported By:</span><span class="detail-info">Marco Silva/IT Operations</span></p>
-            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Firewall-1</span></p>
+            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Firewall-1, indirectly affecting App-1 and App-2</span></p>
         </section>
         <section class="incident-section incident-description">
             <h2>Incident Description</h2>
-            <p>A misconfiguration in Firewall-1's routing rules directed all incoming external traffic exclusively to App-1, leaving App-2 inaccessible.</p>
+            <p>A misconfiguration in Firewall-1's routing rules directed all incoming external traffic exclusively to App-1, leaving App-2 inaccessible and causing an unintended overload on App-1.</p>
         </section>
         <section class="incident-section impact-analysis">
             <h2>Impact Analysis</h2>
-            <p>App-2 was completely cut off from external access, disrupting services for users dependent on it, while App-1 experienced an overload of traffic.</p>
+            <p>App-2 was completely cut off from external access, disrupting services for users dependent on it, while App-1 experienced an unexpected surge in traffic, potentially affecting its performance and availability.</p>
+        </section>
+        <section class="incident-section root-cause-analysis">
+            <h2>Root Cause</h2>
+            <p>The root cause was identified as a typo in Firewall-1's configuration, which mistakenly routed all traffic to App-1 instead of distributing it appropriately between App-1 and App-2.</p>
         </section>
         <section class="incident-section resolution-steps">
             <h2>Resolution Steps</h2>
-            <p>1. The routing misconfiguration was identified by the network team.</p>
-            <p>2. Immediate action was taken to correct the routing rules, restoring balanced traffic flow to both App-1 and App-2 by 09:15.</p>
+            <p>1. The routing misconfiguration was quickly identified by the network team through routine system checks and alerts from the monitoring system.</p>
+            <p>2. Immediate corrective action was taken to adjust the routing rules, ensuring a balanced distribution of traffic to both App-1 and App-2.</p>
+            <p>3. The corrected configuration was applied, and normal traffic flow was restored by 09:15, with continuous monitoring to ensure stability.</p>
+            <p>4. A comprehensive review of firewall configurations was initiated to prevent similar incidents.</p>
             <p><span class="detail-label">Resolved By:</span><span class="detail-info">Sophia Loren/Network Team</span></p>
             <p><span class="detail-label">Resolution Date and Time:</span><span class="detail-info">2023-09-14 09:15</span></p>
         </section>
@@ -45,7 +51,7 @@
         </section>
         <section class="incident-section lessons-learned">
             <h2>Lessons Learned</h2>
-            <p>Emphasized the importance of validating configuration changes through a staging environment and conducting immediate post-deployment checks to ensure all services are operating as expected.</p>
+            <p>This incident underscored the critical importance of validating configuration changes through a staging environment before deployment to production. It also highlighted the need for immediate post-deployment checks to ensure all services are operating as expected. Additionally, the incident reinforced the value of having a robust monitoring system in place that can quickly detect and alert on such misconfigurations, minimizing the impact on service availability and performance.</p>
         </section>
     </article>
 </body>

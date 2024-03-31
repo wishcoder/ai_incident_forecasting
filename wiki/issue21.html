@@ -8,7 +8,7 @@
         .incident-report { font-family: Arial, sans-serif; }
         .incident-section { margin-bottom: 20px; }
         .incident-title { color: #333; }
-        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned { color: #666; }
+        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned, .root-cause-analysis { color: #666; }
         .detail-label { font-weight: bold; }
         .detail-info { margin-left: 5px; }
     </style>
@@ -22,20 +22,26 @@
             <p><span class="detail-label">Title:</span><span class="detail-info">Service-3 Changes</span></p>
             <p><span class="detail-label">Date and Time:</span><span class="detail-info">2024-10-05 09:30</span></p>
             <p><span class="detail-label">Reported By:</span><span class="detail-info">The Janitor/IT Support</span></p>
-            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Service-3</span></p>
+            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Service-3, indirectly affecting App-3 and App-4</span></p>
         </section>
         <section class="incident-section incident-description">
             <h2>Incident Description</h2>
-            <p>Modifications to Service-3's functionality intended to enhance data processing capabilities inadvertently introduced a critical flaw, affecting App-3 and App-4.</p>
+            <p>Recent modifications to Service-3 aimed at enhancing its data processing capabilities inadvertently introduced a critical flaw. This flaw significantly impacted the performance and reliability of data transactions between Service-3 and the applications it serves, particularly App-3 and App-4.</p>
         </section>
         <section class="incident-section impact-analysis">
             <h2>Impact Analysis</h2>
-            <p>The flaw significantly degraded the performance and reliability of data transactions between the affected applications and the database.</p>
+            <p>The introduced flaw led to a considerable degradation in the performance of App-3 and App-4, directly affecting their operational efficiency and the user experience by causing delays and failures in data processing tasks.</p>
+        </section>
+        <section class="incident-section root-cause-analysis">
+            <h2>Root Cause</h2>
+            <p>The root cause of the issue was traced back to configuration changes in Service-3 that introduced an incorrect security certificate. This error resulted in SSL/TLS handshake failures, disrupting secure communication channels.</p>
         </section>
         <section class="incident-section resolution-steps">
             <h2>Resolution Steps</h2>
-            <p>1. The issue was identified through automated performance monitoring.</p>
-            <p>2. Immediate rollback to the previous version of Service-3 was executed, and the system was stabilized by 11:00.</p>
+            <p>1. The problem was swiftly identified through our automated performance and security monitoring systems, which flagged the abnormal behavior.</p>
+            <p>2. The development team took immediate action, performing a rollback to the previous stable version of Service-3 to quickly restore its functionality and ensure service continuity for App-3 and App-4.</p>
+            <p>3. Following the rollback, a thorough review of the changes was conducted to isolate and correct the misconfiguration before attempting to reintroduce the enhancements.</p>
+            <p>4. Enhanced testing protocols, including additional security certificate validation checks, were implemented to prevent similar issues in future updates.</p>
             <p><span class="detail-label">Resolved By:</span><span class="detail-info">Elliot Reid/Development Team</span></p>
             <p><span class="detail-label">Resolution Date and Time:</span><span class="detail-info">2024-10-05 11:00</span></p>
         </section>
@@ -45,7 +51,7 @@
         </section>
         <section class="incident-section lessons-learned">
             <h2>Lessons Learned</h2>
-            <p>Highlighted the necessity for rigorous testing of new features or changes in a controlled environment before deployment to production to ensure they do not adversely affect system performance or functionality.</p>
+            <p>This incident highlighted the critical importance of conducting comprehensive testing, including security and performance aspects, for any new features or changes in a controlled environment before their deployment to the production environment. It underscored the necessity of having robust rollback mechanisms in place to quickly mitigate issues that may arise from new deployments, ensuring minimal impact on service availability and user experience.</p>
         </section>
     </article>
 </body>

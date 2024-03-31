@@ -8,7 +8,7 @@
         .incident-report { font-family: Arial, sans-serif; }
         .incident-section { margin-bottom: 20px; }
         .incident-title { color: #333; }
-        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned { color: #666; }
+        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned, .root-cause-analysis { color: #666; }
         .detail-label { font-weight: bold; }
         .detail-info { margin-left: 5px; }
     </style>
@@ -22,7 +22,7 @@
             <p><span class="detail-label">Title:</span><span class="detail-info">Router-1 is not reachable</span></p>
             <p><span class="detail-label">Date and Time:</span><span class="detail-info">2023-02-20 09:32</span></p>
             <p><span class="detail-label">Reported By:</span><span class="detail-info">Alice Johnson/Network Operations</span></p>
-            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Router-1</span></p>
+            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Router-1, indirectly affecting Firewall-1, App-1, and App-2</span></p>
         </section>
         <section class="incident-section incident-description">
             <h2>Incident Description</h2>
@@ -30,13 +30,19 @@
         </section>
         <section class="incident-section impact-analysis">
             <h2>Impact Analysis</h2>
-            <p>The unavailability of Router-1 has led to a complete loss of external connectivity for App-1 and App-2, affecting user access and critical business operations.</p>
+            <p>The unavailability of Router-1 has led to a complete loss of external connectivity for App-1 and App-2, affecting user access and critical business operations. This incident also highlights the critical dependency on network infrastructure for maintaining service availability.</p>
+        </section>
+        <section class="incident-section root-cause-analysis">
+            <h2>Root Cause</h2>
+            <p>Router-1 firmware issue led to a network interface failure, making the router unresponsive.</p>
         </section>
         <section class="incident-section resolution-steps">
             <h2>Resolution Steps</h2>
             <p>1. Network team alerted and began troubleshooting.</p>
-            <p>2. Restart Router-1 at 10:15 after initial diagnostics.</p>
-            <p>3. Connectivity restored, and services for App-1 and App-2 resumed normal operation by 10:45.</p>
+            <p>2. Identified the firmware issue as the cause of the network interface failure.</p>
+            <p>3. Applied an emergency firmware update to Router-1 to address the issue.</p>
+            <p>4. Restarted Router-1 at 10:15 after applying the firmware update.</p>
+            <p>5. Connectivity restored, and services for App-1 and App-2 resumed normal operation by 10:45.</p>
             <p><span class="detail-label">Resolved By:</span><span class="detail-info">Bob Smith/Network Operations</span></p>
             <p><span class="detail-label">Resolution Date and Time:</span><span class="detail-info">2023-02-20 10:45</span></p>
         </section>
@@ -46,7 +52,7 @@
         </section>
         <section class="incident-section lessons-learned">
             <h2>Lessons Learned</h2>
-            <p>Further investigation revealed a firmware issue was the root cause. The incident underscores the need for regular firmware updates and more robust monitoring of network components to detect and address such issues proactively.</p>
+            <p>The incident with Router-1 highlighted the importance of maintaining up-to-date firmware on all network devices to prevent unexpected failures. It has prompted the implementation of a regular review and update schedule for network device firmware. Additionally, the incident underscores the need for a more robust monitoring system that can detect and alert on such failures more quickly, minimizing downtime and ensuring business continuity.</p>
         </section>
     </article>
 </body>

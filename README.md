@@ -135,7 +135,7 @@ Transform textual and categorical data into numerical formats that ML models can
 >         .incident-report { font-family: Arial, sans-serif; }
 >         .incident-section { margin-bottom: 20px; }
 >         .incident-title { color: #333; }
->         .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned { color: #666; }
+>         .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned, .root-cause-analysis { color: #666; }
 >         .detail-label { font-weight: bold; }
 >         .detail-info { margin-left: 5px; }
 >     </style>
@@ -159,6 +159,10 @@ Transform textual and categorical data into numerical formats that ML models can
 >             <h2>Impact Analysis</h2>
 >             <p>[Analysis of the Incident's Impact]</p>
 >         </section>
+>       <section class="incident-section root-cause-analysis">
+>            <h2>Root Cause</h2>
+>            <p>[Detailed Analysis of the Incident's Root Cause]</p>
+>        </section> 
 >         <section class="incident-section resolution-steps">
 >             <h2>Resolution Steps</h2>
 >             <p>[Step-by-Step Resolution]</p>
@@ -185,145 +189,174 @@ Transform textual and categorical data into numerical formats that ML models can
 1)
 > Incident: Database-1 is not accessible
 > Impact: Service-2 and Service-4 are not able to access data. As a result Service-1 and Service-3 is not able to provide data to App-1, App-2 and App-3 and App-4
+> Root Cause: Database-1 became unresponsive due to a deadlock situation caused by conflicting transactions.
 > Resolutions: Restart Database-1
 
 2) 
 > Incident: Router-1 is not reachable
 > Impact: Outside world is not able to access App-1 and App-2
+> Root Cause: Router-1 firmware issue led to a network interface failure, making the router unresponsive.
 > Resolutions: Restart Router-1
 
 3) 
 > Incident: Router-1 configuration changes
 > Impact: Outside world is not able to access App-1 and App-2
+> Root Cause: Incorrect Router-1 configuration update applied, which included invalid routing rules.
 > Resolutions: Roll back Router-1 configuration changes
 
 4) 
 > Incident: Router-2 is not reachable
 > Impact: Outside world is not able to access App-3 and App-4
+> Root Cause: Incorrect Router-1 configuration update applied, which included invalid routing rules.
 > Resolutions: Restart Router-2
 
 5) 
 > Incident: Router-2 configuration changes
 > Impact: Outside world is not able to access App-3 and App-4
+> Root Cause: Router-2 configuration was updated with a wrong subnet mask, leading to routing issues.
 > Resolutions: Roll back Router-2 configuration changes
 
 6) 
 > Incident: Firewall-1 is not reachable
 > Impact: Outside world is not able to access App-1 and App-2
+> Root Cause: Firewall-1 experienced a software crash due to a memory leak.
 > Resolutions: Restart Firewall-1
 
 7) 
 > Incident: Firewall-1 configuration changes
 > Impact: Outside world is not able to access App-1 and App-2
+> Root Cause: Firewall-1 configuration update included an incorrect IP address range, blocking legitimate traffic.
 > Resolutions: Roll back Firewall-1 configuration changes
 
 8) 
 > Incident: Firewall-1 configuration change routing all traffic to App-1
 > Impact: Outside world is not able to access App-2
+> Root Cause: Firewall-1 configuration mistakenly routed all traffic to App-1 due to a typo in the rule set.
 > Resolutions: Roll back Firewall-1 configuration changes
 
 9) 
 > Incident: Firewall-1 configuration change routing all traffic to App-2
 > Impact: Outside world is not able to access App-1
+> Root Cause: Misconfigured Firewall-1 rule prioritized traffic to App-2, ignoring routing rules for App-1.
 > Resolutions: Roll back Firewall-1 configuration changes
 
 10) 
 > Incident: Firewall-2 is not reachable
 > Impact: Outside world is not able to access App-3 and App-4
+> Root Cause: Firewall-2 became unresponsive due to an overload of connections, exceeding its handling capacity.
 > Resolutions: Restart Firewall-2
 
 11) 
 > Incident: Firewall-2 configuration changes
 > Impact: Outside world is not able to access App-3 and App-4
+> Root Cause: Firewall-2 configuration update inadvertently blocked ports required for accessing App-3 and App-4.
 > Resolutions: Roll back Firewall-2 configuration changes
 
 12) 
 > Incident: Firewall-2 configuration change routing all traffic to App-3
 > Impact: Outside world is not able to access App-4
+> Root Cause: Firewall-2 configuration error routed all incoming traffic to App-3, neglecting App-4.
 > Resolutions: Roll back Firewall-2 configuration changes
 
 13) 
 > Incident: Firewall-2 configuration change routing all traffic to App-4
 > Impact: Outside world is not able to access App-3
+> Root Cause: Incorrectly configured Firewall-2 rule set directed all traffic to App-4, isolating App-3.
 > Resolutions: Roll back Firewall-2 configuration changes
 
 14) 
 > Incident: Service-2 is not accessible
 > Impact: Service-1 is not able to access Service-2 and not able to provide data back to App-1 and App-2
+> Root Cause: Service-2 crashed due to an unhandled exception in the code.
 > Resolutions: Restart Service-2
 
 15) 
 > Incident: Service-2 changes
 > Impact: Service-1 is able to access Service-2 but due to misconfiguration is not able to provide data back to App-1 and App-2
+> Root Cause: Service-2 update included incorrect API endpoint configurations, disrupting communication with Service-1.
 > Resolutions: Roll back Service-2 changes and restart Service-2
 
 16) 
 > Incident: Service-4 is not accessible
 > Impact: Service-3 is not able to access Service-4 and not able to provide data back to App-3 and App-4
+> Root Cause: Service-4 suffered a failure due to exhausted system resources (e.g., memory).
 > Resolutions: Restart Service-4
 
 17) 
 > Incident: Service-4 changes
 > Impact: Service-3 is able to access Service-4 but due to misconfiguration is not able to provide data back to App-3 and App-4
+> Root Cause: Service-4 configuration changes made incompatible API updates, breaking integration with Service-3.
 > Resolutions: Roll back Service-4 changes and restart Service-4
 
 18) 
 > Incident: Service-1 is not accessible
 > Impact: App-1 and App-2 is not able to access data from Service-1
+> Root Cause: Service-1 was accidentally shut down during routine maintenance.
 > Resolutions: Restart Service-1
 
 19) 
 > Incident: Service-1 changes
 > Impact: App-1 and App-2 is able to access Service-1 but due to misconfiguration is not able to access data
+> Root Cause: Service-1 update introduced a bug that affected data retrieval functions.
 > Resolutions: Roll back Service-1 changes and restart Service-1
 
 20) 
 > Incident: Service-3 is not accessible
 > Impact: App-3 and App-4 is not able to access data from Service-3
+> Root Cause: Service-3 became inaccessible due to a network partition, isolating it from its consumers.
 > Resolutions: Restart Service-3
 
 21) 
 > Incident: Service-3 changes
 > Impact: App-3 and App-4 are able to access Service-3 but due to misconfiguration is not able to access data
+> Root Cause: Service-3 configuration changes introduced an incorrect security certificate, leading to SSL/TLS handshake failures.
 > Resolutions: Roll back Service-3 changes and restart Service-3
 
 22) 
 > Incident: App-1 is not accessible
 > Impact: Outside world is not able to access App-1
+> Root Cause: App-1 server's disk space was full, preventing the application from starting.
 > Resolutions: Restart App-1
 
 23) 
 > Incident: App-2 is not accessible
 > Impact: Outside world is not able to access App-2
+> Root Cause: App-2 experienced a critical failure due to a corrupt database index.
 > Resolutions: Restart App-2
 
 24) 
 > Incident: App-3 is not accessible
 > Impact: Outside world is not able to access App-3
+> Root Cause: App-3 was inadvertently stopped by an automated script intended for another application.
 > Resolutions: Restart App-3
 
 25) 
 > Incident: App-4 is not accessible
 > Impact: Outside world is not able to access App-4
+> Root Cause: App-4's hosting environment underwent an unplanned restart due to a hypervisor crash.
 > Resolutions: Restart App-4
 
 26) 
 > Incident: App-1 configuration changes
 > Impact: Outside world is able to access App-1 but due to misconfiguration is not able to use it
+> Root Cause: App-1 configuration changes made the user interface elements unresponsive due to JavaScript errors.
 > Resolutions: Revert back App-1 configuration changes and restart App-1
 
 27) 
 > Incident: App-2 configuration changes
 > Impact: Outside world is able to access App-2 but due to misconfiguration is not able to use it
+> Root Cause: App-2's latest configuration update included an invalid external service endpoint, breaking functionality.
 > Resolutions: Revert back App-2 configuration changes and restart App-2
 
 28) 
 > Incident: App-3 configuration changes
 > Impact: Outside world is able to access App-3 but due to misconfiguration is not able to use it
+> Root Cause: App-3 configuration update introduced a firewall rule that blocked incoming traffic.
 > Resolutions: Revert back App-3 configuration changes and restart App-3
 
 29) 
 > Incident: App-4 configuration changes
 > Impact: Outside world is able to access App-4 but due to misconfiguration is not able to use it
+> Root Cause: App-4's configuration was updated to use an incompatible version of a critical dependency, causing runtime errors.
 > Resolutions: Revert back App-4 configuration changes and restart App-4
 ```

@@ -8,7 +8,7 @@
         .incident-report { font-family: Arial, sans-serif; }
         .incident-section { margin-bottom: 20px; }
         .incident-title { color: #333; }
-        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned { color: #666; }
+        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned, .root-cause-analysis { color: #666; }
         .detail-label { font-weight: bold; }
         .detail-info { margin-left: 5px; }
     </style>
@@ -22,21 +22,27 @@
             <p><span class="detail-label">Title:</span><span class="detail-info">Service-2 Changes</span></p>
             <p><span class="detail-label">Date and Time:</span><span class="detail-info">2024-04-12 16:30</span></p>
             <p><span class="detail-label">Reported By:</span><span class="detail-info">Perry Cox/Development Team</span></p>
-            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Service-2</span></p>
+            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Service-2, indirectly affecting App-1 and App-2</span></p>
         </section>
         <section class="incident-section incident-description">
             <h2>Incident Description</h2>
-            <p>Recent updates to Service-2 introduced a misconfiguration, leading to data retrieval issues for App-1 and App-2.</p>
+            <p>Recent updates to Service-2 inadvertently introduced a misconfiguration, leading to significant data retrieval issues for App-1 and App-2. This misconfiguration prevented Service-1 from accessing necessary data from Service-2, thereby directly impacting the operational efficiency and functionality of both applications.</p>
         </section>
         <section class="incident-section impact-analysis">
             <h2>Impact Analysis</h2>
-            <p>The misconfiguration in Service-2 prevented Service-1 from accessing necessary data, directly impacting the operational efficiency of App-1 and App-2.</p>
+            <p>The misconfiguration in Service-2 caused a disruption in the data flow between Service-1 and the database, affecting the overall performance and reliability of App-1 and App-2, and leading to service degradation.</p>
+        </section>
+        <section class="incident-section root-cause-analysis">
+            <h2>Root Cause</h2>
+            <p>The root cause of the incident was identified as incorrect API endpoint configurations included in the recent update to Service-2. This disrupted the established communication protocols with Service-1.</p>
         </section>
         <section class="incident-section resolution-steps">
             <h2>Resolution Steps</h2>
-            <p>1. The development team was alerted to the issue and began immediate troubleshooting.</p>
-            <p>2. Service-2's recent changes were rolled back to the last stable configuration by 17:15.</p>
-            <p>3. Service functionality was fully restored, and a post-mortem analysis was scheduled to prevent similar issues.</p>
+            <p>1. The issue was promptly identified through routine system checks and alerts from the monitoring tools.</p>
+            <p>2. The development team initiated an immediate review of the recent changes to Service-2 and identified the misconfiguration.</p>
+            <p>3. A decision was made to roll back Service-2 to its last stable configuration, which was successfully implemented by 17:15.</p>
+            <p>4. Full functionality and service connectivity were restored, and additional tests were conducted to ensure system stability.</p>
+            <p>5. A post-mortem analysis was scheduled to review the incident and implement measures to prevent recurrence.</p>
             <p><span class="detail-label">Resolved By:</span><span class="detail-info">Elliot Reid/Development Team</span></p>
             <p><span class="detail-label">Resolution Date and Time:</span><span class="detail-info">2024-04-12 17:15</span></p>
         </section>
@@ -46,7 +52,7 @@
         </section>
         <section class="incident-section lessons-learned">
             <h2>Lessons Learned</h2>
-            <p>Emphasized the critical importance of thorough testing and validation of service updates in a staging environment before deployment to production to ensure compatibility and functionality.</p>
+            <p>This incident emphasized the critical importance of conducting thorough testing and validation of all service updates in a staging environment prior to their deployment to the production environment. It highlighted the need for robust change management processes and the benefits of having automated rollback capabilities to quickly revert changes in case of an incident. Additionally, the incident reinforced the value of continuous monitoring and alerting systems in detecting and addressing service disruptions promptly.</p>
         </section>
     </article>
 </body>

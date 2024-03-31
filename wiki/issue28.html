@@ -8,7 +8,7 @@
         .incident-report { font-family: Arial, sans-serif; }
         .incident-section { margin-bottom: 20px; }
         .incident-title { color: #333; }
-        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned { color: #666; }
+        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned, .root-cause-analysis { color: #666; }
         .detail-label { font-weight: bold; }
         .detail-info { margin-left: 5px; }
     </style>
@@ -22,20 +22,26 @@
             <p><span class="detail-label">Title:</span><span class="detail-info">App-3 Configuration Changes</span></p>
             <p><span class="detail-label">Date and Time:</span><span class="detail-info">2025-05-22 14:30</span></p>
             <p><span class="detail-label">Reported By:</span><span class="detail-info">Bob Kelso/Development Team</span></p>
-            <p><span class="detail-label">Component Affected:</span><span class="detail-info">App-3</span></p>
+            <p><span class="detail-label">Component Affected:</span><span class="detail-info">App-3, specifically its database connectivity and performance</span></p>
         </section>
         <section class="incident-section incident-description">
             <h2>Incident Description</h2>
-            <p>Adjustments made to App-3's database connection settings inadvertently reduced performance, affecting end-user experience.</p>
+            <p>Recent adjustments to App-3's database connection settings, intended to enhance security measures, inadvertently introduced a firewall rule that significantly reduced the application's performance, adversely affecting end-user experience with increased load times and reduced responsiveness.</p>
         </section>
         <section class="incident-section impact-analysis">
             <h2>Impact Analysis</h2>
-            <p>The performance degradation significantly impacted the application's responsiveness, leading to increased load times and user frustration.</p>
+            <p>The unintended performance degradation led to a noticeable decline in application responsiveness, directly impacting user satisfaction and potentially affecting the reputation of our services due to increased load times and operational inefficiency.</p>
+        </section>
+        <section class="incident-section root-cause-analysis">
+            <h2>Root Cause</h2>
+            <p>A detailed review of the configuration changes revealed that the update inadvertently introduced a restrictive firewall rule that blocked a significant portion of incoming traffic to the database, leading to the observed performance issues.</p>
         </section>
         <section class="incident-section resolution-steps">
             <h2>Resolution Steps</h2>
-            <p>1. The issue was identified through user feedback and system monitoring.</p>
-            <p>2. The original database connection settings were restored, improving performance back to optimal levels by 16:00.</p>
+            <p>1. Immediate action was taken by the development team to investigate the root cause of the performance degradation following reports from users and alerts from our system monitoring tools.</p>
+            <p>2. The problematic firewall rule was identified and corrected, with the original database connection settings being restored to ensure optimal performance and accessibility.</p>
+            <p>3. App-3's performance was closely monitored following the adjustments to confirm that the issue had been fully resolved and that the application was operating at its expected efficiency levels.</p>
+            <p>4. Full functionality and optimal performance levels were confirmed to have been restored to all users by 16:00.</p>
             <p><span class="detail-label">Resolved By:</span><span class="detail-info">John Dorian/Development Team</span></p>
             <p><span class="detail-label">Resolution Date and Time:</span><span class="detail-info">2025-05-22 16:00</span></p>
         </section>
@@ -45,7 +51,7 @@
         </section>
         <section class="incident-section lessons-learned">
             <h2>Lessons Learned</h2>
-            <p>Emphasized the need for comprehensive testing of configuration changes in a staging environment to assess impact on performance before deployment.</p>
+            <p>This incident has underscored the critical importance of conducting thorough and comprehensive testing of all configuration changes, particularly those affecting security and connectivity, in a controlled staging environment prior to deployment. It highlighted the need for a balanced approach to security enhancements to ensure they do not adversely impact application performance or user experience. Additionally, the incident emphasized the value of rapid diagnostic and response capabilities in identifying and rectifying configuration issues to minimize their impact on service delivery and maintain user trust.</p>
         </section>
     </article>
 </body>

@@ -8,7 +8,7 @@
         .incident-report { font-family: Arial, sans-serif; }
         .incident-section { margin-bottom: 20px; }
         .incident-title { color: #333; }
-        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned { color: #666; }
+        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned, .root-cause-analysis { color: #666; }
         .detail-label { font-weight: bold; }
         .detail-info { margin-left: 5px; }
     </style>
@@ -22,21 +22,26 @@
             <p><span class="detail-label">Title:</span><span class="detail-info">Firewall-2 is not reachable</span></p>
             <p><span class="detail-label">Date and Time:</span><span class="detail-info">2023-11-10 09:15</span></p>
             <p><span class="detail-label">Reported By:</span><span class="detail-info">Derek Yu/Network Operations</span></p>
-            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Firewall-2</span></p>
+            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Firewall-2, indirectly affecting App-3 and App-4</span></p>
         </section>
         <section class="incident-section incident-description">
             <h2>Incident Description</h2>
-            <p>Firewall-2 became unresponsive, likely due to a hardware failure, affecting external connectivity for App-3 and App-4.</p>
+            <p>Firewall-2 became unresponsive, likely due to a hardware failure, affecting external connectivity for App-3 and App-4. This disruption led to significant operational impacts for users relying on these applications.</p>
         </section>
         <section class="incident-section impact-analysis">
             <h2>Impact Analysis</h2>
-            <p>Loss of Firewall-2 connectivity resulted in no external access to App-3 and App-4, significantly impacting user operations.</p>
+            <p>The loss of Firewall-2 connectivity resulted in no external access to App-3 and App-4, significantly impacting user operations and service availability.</p>
+        </section>
+        <section class="incident-section root-cause-analysis">
+            <h2>Root Cause</h2>
+            <p>Initial assessments suggested a hardware failure; however, further investigation revealed Firewall-2 became unresponsive due to an overload of connections, exceeding its handling capacity and leading to a system crash.</p>
         </section>
         <section class="incident-section resolution-steps">
             <h2>Resolution Steps</h2>
-            <p>1. Immediate escalation to the hardware team for diagnostics.</p>
-            <p>2. Faulty hardware component identified and replaced by 12:00.</p>
-            <p>3. Firewall-2 functionality restored, and normal operations for App-3 and App-4 resumed by 12:30.</p>
+            <p>1. Immediate escalation to the hardware team for diagnostics revealed the overload issue.</p>
+            <p>2. System configurations were adjusted to manage connection loads more efficiently, and faulty hardware components contributing to the overload were identified and replaced by 12:00.</p>
+            <p>3. Firewall-2 functionality was fully restored, and normal operations for App-3 and App-4 resumed by 12:30, following thorough testing to ensure stability.</p>
+            <p>4. Measures were implemented to enhance monitoring and alerting for unusual traffic patterns to prevent future overloads.</p>
             <p><span class="detail-label">Resolved By:</span><span class="detail-info">Anna Bell/Hardware Support Team</span></p>
             <p><span class="detail-label">Resolution Date and Time:</span><span class="detail-info">2023-11-10 12:30</span></p>
         </section>
@@ -46,7 +51,7 @@
         </section>
         <section class="incident-section lessons-learned">
             <h2>Lessons Learned</h2>
-            <p>Highlighted the need for regular maintenance checks and the availability of spare parts for critical infrastructure components to ensure quick recovery from hardware failures.</p>
+            <p>This incident highlighted the critical need for regular maintenance checks and the importance of having spare parts readily available for critical infrastructure components. It also underscored the importance of dynamic load management and the need for robust monitoring systems capable of detecting and alerting on potential overload conditions to ensure quick recovery from hardware failures and maintain service continuity.</p>
         </section>
     </article>
 </body>

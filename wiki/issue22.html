@@ -8,7 +8,7 @@
         .incident-report { font-family: Arial, sans-serif; }
         .incident-section { margin-bottom: 20px; }
         .incident-title { color: #333; }
-        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned { color: #666; }
+        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned, .root-cause-analysis { color: #666; }
         .detail-label { font-weight: bold; }
         .detail-info { margin-left: 5px; }
     </style>
@@ -22,20 +22,26 @@
             <p><span class="detail-label">Title:</span><span class="detail-info">App-1 is not accessible</span></p>
             <p><span class="detail-label">Date and Time:</span><span class="detail-info">2024-11-15 08:00</span></p>
             <p><span class="detail-label">Reported By:</span><span class="detail-info">Carla Espinosa/IT Department</span></p>
-            <p><span class="detail-label">Component Affected:</span><span class="detail-info">App-1</span></p>
+            <p><span class="detail-label">Component Affected:</span><span class="detail-info">App-1, indirectly affecting database connectivity</span></p>
         </section>
         <section class="incident-section incident-description">
             <h2>Incident Description</h2>
-            <p>App-1 became inaccessible to all users this morning due to an unexpected database connectivity issue.</p>
+            <p>This morning, App-1 became unexpectedly inaccessible to all users. Preliminary investigations indicated a database connectivity issue, which was later identified as a result of the App-1 server's disk space being completely filled, preventing the application from initiating successfully.</p>
         </section>
         <section class="incident-section impact-analysis">
             <h2>Impact Analysis</h2>
-            <p>The inaccessibility of App-1 has halted all user transactions and data processing, significantly impacting business operations.</p>
+            <p>The inaccessibility of App-1 disrupted critical user transactions and data processing activities, leading to significant operational delays and impacting business continuity.</p>
+        </section>
+        <section class="incident-section root-cause-analysis">
+            <h2>Root Cause</h2>
+            <p>Detailed diagnostics revealed that the server hosting App-1 had its disk space fully utilized, primarily due to unchecked log file growth, which in turn prevented the application from accessing the database effectively.</p>
         </section>
         <section class="incident-section resolution-steps">
             <h2>Resolution Steps</h2>
-            <p>1. IT support conducted immediate diagnostics to identify the cause of the connectivity issue.</p>
-            <p>2. The database connection was restored, and App-1 was brought back online by 10:30.</p>
+            <p>1. IT support was immediately notified of the issue and initiated a comprehensive diagnostic to pinpoint the root cause.</p>
+            <p>2. Actions were taken to clear the unnecessary files and optimize the disk space usage on the server, ensuring that App-1 had sufficient resources to operate.</p>
+            <p>3. The database connection was successfully restored, and App-1's accessibility was fully reinstated by 10:30, with measures implemented to monitor disk space usage closely to prevent recurrence.</p>
+            <p>4. A review of log management and server maintenance practices was conducted to enhance system resilience and operational efficiency.</p>
             <p><span class="detail-label">Resolved By:</span><span class="detail-info">John Dorian/Database Management</span></p>
             <p><span class="detail-label">Resolution Date and Time:</span><span class="detail-info">2024-11-15 10:30</span></p>
         </section>
@@ -45,7 +51,7 @@
         </section>
         <section class="incident-section lessons-learned">
             <h2>Lessons Learned</h2>
-            <p>Underlined the importance of continuous monitoring and redundancy for critical infrastructure components to ensure high availability and quick recovery from unexpected failures.</p>
+            <p>This incident underscored the critical importance of implementing proactive monitoring and management strategies for server resources, particularly disk space. It highlighted the necessity for regular maintenance routines, including log file management and disk usage reviews, to ensure the high availability of critical applications like App-1. Furthermore, it emphasized the value of having effective alerting mechanisms in place to quickly identify and mitigate potential issues before they escalate into service-impacting problems.</p>
         </section>
     </article>
 </body>

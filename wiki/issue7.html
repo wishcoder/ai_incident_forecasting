@@ -8,7 +8,7 @@
         .incident-report { font-family: Arial, sans-serif; }
         .incident-section { margin-bottom: 20px; }
         .incident-title { color: #333; }
-        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned { color: #666; }
+        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned, .root-cause-analysis { color: #666; }
         .detail-label { font-weight: bold; }
         .detail-info { margin-left: 5px; }
     </style>
@@ -22,22 +22,27 @@
             <p><span class="detail-label">Title:</span><span class="detail-info">Firewall-1 Configuration Changes</span></p>
             <p><span class="detail-label">Date and Time:</span><span class="detail-info">2023-08-03 10:20</span></p>
             <p><span class="detail-label">Reported By:</span><span class="detail-info">Natalie Chen/Cybersecurity</span></p>
-            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Firewall-1</span></p>
+            <p><span class="detail-label">Component Affected:</span><span class="detail-info">Firewall-1, indirectly affecting Router-1, App-1, and App-2</span></p>
         </section>
         <section class="incident-section incident-description">
             <h2>Incident Description</h2>
-            <p>Incorrect configuration changes were applied to Firewall-1 during a routine update, inadvertently blocking legitimate traffic to App-1 and App-2.</p>
+            <p>Incorrect configuration changes were applied to Firewall-1 during a routine update, inadvertently blocking legitimate traffic to App-1 and App-2. This misconfiguration disrupted normal service operations and access.</p>
         </section>
         <section class="incident-section impact-analysis">
             <h2>Impact Analysis</h2>
-            <p>The misconfiguration caused significant disruption to external access for App-1 and App-2, affecting user operations and service availability.</p>
+            <p>The misconfiguration caused significant disruption to external access for App-1 and App-2, directly impacting user operations and service availability. The incident underscores the critical role of Firewall-1 in network security and traffic management.</p>
+        </section>
+        <section class="incident-section root-cause-analysis">
+            <h2>Root Cause</h2>
+            <p>An incorrect IP address range was included during the Firewall-1 configuration update, leading to the unintended blocking of legitimate traffic.</p>
         </section>
         <section class="incident-section resolution-steps">
             <h2>Resolution Steps</h2>
-            <p>1. The configuration error was detected through automated monitoring systems.</p>
-            <p>2. Cybersecurity team initiated an emergency protocol to assess and correct the configuration.</p>
-            <p>3. Configuration changes were rolled back to the previous stable version at 11:45.</p>
-            <p>4. Full service was restored to App-1 and App-2 by 12:15, and a review was scheduled to prevent future occurrences.</p>
+            <p>1. The configuration error was quickly detected through automated monitoring systems, triggering an immediate alert.</p>
+            <p>2. The Cybersecurity team, in collaboration with Network Operations, initiated an emergency protocol to assess and correct the configuration.</p>
+            <p>3. Configuration changes were meticulously reviewed and then rolled back to the previous stable version at 11:45, following a thorough verification process to ensure no other issues were present.</p>
+            <p>4. Full service was restored to App-1 and App-2 by 12:15, after conducting extensive testing to confirm the resolution of the issue.</p>
+            <p>5. A post-incident review was scheduled to analyze the incident in depth and to develop strategies to prevent similar occurrences in the future.</p>
             <p><span class="detail-label">Resolved By:</span><span class="detail-info">Oliver Grant/Network Operations Team</span></p>
             <p><span class="detail-label">Resolution Date and Time:</span><span class="detail-info">2023-08-03 12:15</span></p>
         </section>
@@ -47,7 +52,7 @@
         </section>
         <section class="incident-section lessons-learned">
             <h2>Lessons Learned</h2>
-            <p>This incident highlighted the critical need for a more rigorous configuration change process, including pre-approval by cybersecurity and network operations, and the importance of immediate rollback capabilities for quickly addressing any issues post-deployment.</p>
+            <p>This incident highlighted the critical need for a more rigorous configuration change process, emphasizing the importance of pre-approval by both cybersecurity and network operations teams. It also demonstrated the value of having immediate rollback capabilities to quickly address any issues post-deployment. Furthermore, the incident reinforced the importance of automated monitoring systems in detecting and alerting on operational anomalies swiftly, ensuring minimal impact on service continuity.</p>
         </section>
     </article>
 </body>

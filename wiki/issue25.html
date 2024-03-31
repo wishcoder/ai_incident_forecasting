@@ -8,7 +8,7 @@
         .incident-report { font-family: Arial, sans-serif; }
         .incident-section { margin-bottom: 20px; }
         .incident-title { color: #333; }
-        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned { color: #666; }
+        .incident-detail, .incident-description, .impact-analysis, .resolution-steps, .incident-status, .lessons-learned, .root-cause-analysis { color: #666; }
         .detail-label { font-weight: bold; }
         .detail-info { margin-left: 5px; }
     </style>
@@ -22,20 +22,26 @@
             <p><span class="detail-label">Title:</span><span class="detail-info">App-4 is not accessible</span></p>
             <p><span class="detail-label">Date and Time:</span><span class="detail-info">2025-02-20 10:30</span></p>
             <p><span class="detail-label">Reported By:</span><span class="detail-info">Ted Buckland/IT Department</span></p>
-            <p><span class="detail-label">Component Affected:</span><span class="detail-info">App-4</span></p>
+            <p><span class="detail-label">Component Affected:</span><span class="detail-info">App-4, including its hosting infrastructure</span></p>
         </section>
         <section class="incident-section incident-description">
             <h2>Incident Description</h2>
-            <p>An unexpected outage of the hosting infrastructure led to App-4 becoming inaccessible to all users.</p>
+            <p>App-4 became unexpectedly inaccessible to all users following an unplanned outage of its hosting infrastructure, attributed to a critical failure in the underlying hypervisor.</p>
         </section>
         <section class="incident-section impact-analysis">
             <h2>Impact Analysis</h2>
-            <p>The outage has caused a complete service disruption for App-4, critically affecting user engagement and operational tasks reliant on the application.</p>
+            <p>This outage has led to a complete service disruption for App-4, severely affecting user engagement and halting all operational tasks reliant on the application. The sudden loss of service has also impacted the trust and reliability perceived by our user base.</p>
+        </section>
+        <section class="incident-section root-cause-analysis">
+            <h2>Root Cause</h2>
+            <p>Detailed analysis with the hosting provider revealed that the outage was caused by a hypervisor crash, which led to an unplanned restart of App-4's hosting environment.</p>
         </section>
         <section class="incident-section resolution-steps">
             <h2>Resolution Steps</h2>
-            <p>1. The hosting provider was contacted immediately to diagnose the cause of the outage.</p>
-            <p>2. Emergency maintenance was performed, and App-4's services were restored by 12:00.</p>
+            <p>1. Immediate contact was established with the hosting provider to report the incident and initiate a diagnostic review of the hosting environment.</p>
+            <p>2. The hosting provider conducted emergency maintenance, identifying and rectifying the issue with the hypervisor to prevent further occurrences.</p>
+            <p>3. App-4's services were systematically restored, with full functionality confirmed and verified by 12:00.</p>
+            <p>4. Post-incident, a review of the disaster recovery and business continuity plans was conducted to enhance resilience against similar incidents.</p>
             <p><span class="detail-label">Resolved By:</span><span class="detail-info">Janitor/Hosting Provider Support</span></p>
             <p><span class="detail-label">Resolution Date and Time:</span><span class="detail-info">2025-02-20 12:00</span></p>
         </section>
@@ -45,7 +51,7 @@
         </section>
         <section class="incident-section lessons-learned">
             <h2>Lessons Learned</h2>
-            <p>Underlined the need for a robust disaster recovery plan and the importance of maintaining effective communication channels with service providers to ensure swift resolution of such incidents.</p>
+            <p>The incident has underscored the critical importance of having a robust disaster recovery plan in place, including regular testing and updates to ensure its effectiveness. It also highlighted the necessity of maintaining open and effective communication channels with all service providers, enabling swift action and resolution in the event of an infrastructure failure. Additionally, the incident emphasized the value of proactive monitoring and redundancy measures within the hosting infrastructure to detect and mitigate potential failures before they impact service availability.</p>
         </section>
     </article>
 </body>
