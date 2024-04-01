@@ -10,14 +10,13 @@ class TestRootCauseForecasting(unittest.TestCase):
         self.incidents_data = self.extractor.load_incidents()
 
         self.rc_forecasting = RootCauseForecasting()
-        self.rc_forecasting.pre_init(self.incidents_data, unit_test=True)
-        self.rc_forecasting.prepare_data()
-        self.rc_forecasting.train()
+        X, y = self.rc_forecasting.prepare_data(self.incidents_data)
+        self.rc_forecasting.train(X, y)
         self.rc_forecasting.validate_model()
 
     def test_predict_app1(self):
         # For prediction, pass the title of the incident you want to predict the root cause for
-        predicted_root_cause = self.rc_forecasting.predict("App 1")
+        predicted_root_cause = self.rc_forecasting.predict("Firewall 1")
         print(f"Predicted class for the root cause: {predicted_root_cause}")
         self.assertEqual(True, True)  # add assertion here
 
